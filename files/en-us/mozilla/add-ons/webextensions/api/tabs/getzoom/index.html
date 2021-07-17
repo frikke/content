@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - getZoom
   - tabs
+browser-compat: webextensions.api.tabs.getZoom
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -40,7 +41,7 @@ tags:
 
 <p>Get the zoom factor for the current tab:</p>
 
-<pre class="notranslate brush: js">function onGot(zoom) {
+<pre class="brush: js">function onGot(zoom) {
   console.log(zoom);
 }
 
@@ -53,7 +54,7 @@ gettingZoom.then(onGot, onError);</pre>
 
 <p>Get the zoom factor for the tab whose ID is 2:</p>
 
-<pre class="notranslate brush: js">function onGot(zoom) {
+<pre class="brush: js">function onGot(zoom) {
   console.log(zoom);
 }
 
@@ -68,7 +69,7 @@ gettingZoom.then(onGot, onError);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.tabs.getZoom")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

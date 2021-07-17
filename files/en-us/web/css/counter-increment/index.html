@@ -8,6 +8,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.counter-increment
 ---
 <div>{{CSSRef}}</div>
 
@@ -21,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Increment "my-counter" by 1 */
+<pre class="brush:css no-line-numbers">/* Increment "my-counter" by 1 */
 counter-increment: my-counter;
 
 /* Decrement "my-counter" by 1 */
@@ -36,6 +37,7 @@ counter-increment: none;
 /* Global values */
 counter-increment: inherit;
 counter-increment: initial;
+counter-increment: revert;
 counter-increment: unset;
 </pre>
 
@@ -63,13 +65,13 @@ counter-increment: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Incrementing_named_counters">Incrementing named counters</h3>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   counter-increment: chapter section 2 page;
   /* Increases the value of the chapter and page counters by 1,
      and the section counter by 2 */
@@ -78,31 +80,11 @@ counter-increment: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Lists", "#propdef-counter-increment", "counter-increment")}}</td>
-   <td>{{Spec2("CSS3 Lists")}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#propdef-counter-increment", "counter-increment")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.counter-increment")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,6 +8,7 @@ tags:
 - Service Workers
 - ServiceWorker
 - ServiceWorkerContainer
+browser-compat: api.ServiceWorkerContainer.getRegistration
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -20,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>serviceWorkerContainer</em>.getRegistration(<em>scope</em>).then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
+  class="brush: js"><em>serviceWorkerContainer</em>.getRegistration(<em>scope</em>).then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,25 +47,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#dom-serviceworkercontainer-getregistration',
-        'ServiceWorkerContainer: getRegistration')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.ServiceWorkerContainer.getRegistration")}}</p>
-</div>
+<p>{{Compat}}</p>

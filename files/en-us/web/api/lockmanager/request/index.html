@@ -2,13 +2,14 @@
 title: LockManager.request()
 slug: Web/API/LockManager/request
 tags:
-- API
-- Experimental
-- LockManager
-- Method
-- Reference
-- Web Locks API
-- request()
+  - API
+  - Experimental
+  - LockManager
+  - Method
+  - Reference
+  - Web Locks API
+  - request()
+browser-compat: api.LockManager.request
 ---
 <p>{{APIRef("Web Locks")}}{{SeeCompatTable}}</p>
 
@@ -34,14 +35,14 @@ tags:
 <p>This shared/exclusive lock pattern is common in database transaction architecture, for
   example to allow multiple simultaneous readers (each requests a <code>"shared"</code>
   lock) but only one writer (a single <code>"exclusive"</code> lock). This is known as the
-  readers-writer pattern. In the <a href="/docs/Web/API/IndexedDB_API">IndexedDB API</a>,
+  readers-writer pattern. In the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>,
   this is exposed as <code>"readonly"</code> and <code>"readwrite"</code> transactions
   which have the same semantics.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
+  class="brush: js">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -82,7 +83,7 @@ tags:
 
 <p>The following example shows the basic use of the <code>request()</code> method with an
   asynchronous function as the callback. Once the callback is invoked, no other running
-  code on this orign can hold `<code>my_resource</code>` until the callback returns.</p>
+  code on this origin can hold `<code>my_resource</code>` until the callback returns.</p>
 
 <pre class="brush: js">await navigator.locks.request('my_resource', async lock =&gt; {
   // The lock was granted.
@@ -121,7 +122,7 @@ tags:
 <p>To grab a lock only if it isn't already being held, use the <code>ifAvailable</code>
   option. In this function <code>await</code> means the method will not return until the
   callback is complete. Since the lock is only granted if it was available, this call
-  avoids needing to wait on the lock being released elsehwere.</p>
+  avoids needing to wait on the lock being released elsewhere.</p>
 
 <pre class="brush: js">await navigator.locks.request('my_resource', {ifAvailable: true}, async lock =&gt; {
   if (!lock) {
@@ -156,21 +157,8 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Locks','#dom-lockmanager-request','request()')}}</td>
-      <td>{{Spec2('Web Locks')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.LockManager.request")}}</p>
+<p>{{Compat}}</p>

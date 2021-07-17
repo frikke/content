@@ -12,6 +12,7 @@ tags:
   - MediaSessionAction
   - Reference
   - Type
+browser-compat: api.MediaSessionAction
 ---
 <p>To support an action on a media session, such as seeking, pausing, or changing tracks, you need to call the {{domxref("MediaSession")}} interface's {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method to establish a handler for that action. <span class="seoSummary">The specific type of media session action to be handled on a <code>MediaSession</code> is identified using a string from the <code>MediaSessionAction</code> enumerated type.</span></p>
 
@@ -44,6 +45,7 @@ tags:
  <dt><a id="stop"><code>stop</code></a></dt>
  <dd>Halts playback entirely.</dd>
 </dl>
+</div>
 
 <h2 id="Description">Description</h2>
 
@@ -55,7 +57,7 @@ tags:
 
 <p>This example implements seek forward and backward actions for an audio player by setting up the <code>{{anch("seekforward")}}</code> and <code>{{anch("seekbackward")}}</code> action handlers.</p>
 
-<pre class="brush: js notranslate">let skipTime = 10; // Time to skip in seconds
+<pre class="brush: js">let skipTime = 10; // Time to skip in seconds
 
 navigator.mediaSession.setActionHandler('seekforward', details =&gt; {
  // User clicked "Seek Forward" media notification icon.
@@ -75,7 +77,7 @@ navigator.mediaSession.setActionHandler('seekbackward', details =&gt; {
 
 <p>You can also, if you prefer, use a single function to handle multiple action types, by checking the value of the <code>MediaSessionActionDetails</code> object's {{domxref("MediaSessionActionDetails.action", "action")}} property:</p>
 
-<pre class="brush: js notranslate">let skipTime = 7;
+<pre class="brush: js">let skipTime = 7;
 
 navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
@@ -99,7 +101,7 @@ function handleSeek(details) {
 
 <p>In this example, instead of seeking a specified distance, the <code>seekforward</code> and <code>seekbackward</code> handlers use the time specified in the <code>MediaSessionActionDetails</code> object's {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} property.</p>
 
-<pre class="brush: js notranslate">navigator.mediaSession.setActionHandler("seekforward", handleSeek);
+<pre class="brush: js">navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
 
 function handleSeek(details) {
@@ -116,25 +118,7 @@ function handleSeek(details) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Session','#enumdef-mediasessionaction','Media Session action types')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div>
-
-<p>{{Compat("api.MediaSessionAction")}}</p>
-</div>
-</div>
+<p>{{Compat}}</p>

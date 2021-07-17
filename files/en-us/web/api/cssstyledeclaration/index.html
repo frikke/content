@@ -7,6 +7,7 @@ tags:
   - CSSRule
   - Interface
   - Reference
+browser-compat: api.CSSStyleDeclaration
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
@@ -24,7 +25,7 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("CSSStyleDeclaration.cssText")}}</dt>
- <dd>Textual representation of the declaration block. Setting this attribute changes the style.</dd>
+ <dd>Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style. If you want a text representation of a computed declaration block, you can get it with <code>JSON.stringify()</code>.</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.length")}}{{ReadOnlyInline}}</dt>
  <dd>The number of properties. See the {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} method below.</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.parentRule")}}{{ReadOnlyInline}}</dt>
@@ -34,7 +35,7 @@ tags:
 <h3 id="CSS_Properties">CSS Properties</h3>
 
 <dl>
- <dt>{{DOMxRef("CSSStyleDeclaration.named_properties", "CSSStyleDeclaration.cssFloat")}}</dt>
+ <dt>{{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}</dt>
  <dd>Special alias for the {{CSSxRef("float")}} CSS property.</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}</dt>
  <dd>Dashed and camel-cased attributes for all supported CSS properties.</dd>
@@ -54,7 +55,7 @@ tags:
  <dd>Removes a property from the CSS declaration block.</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.setProperty()")}}</dt>
  <dd>Modifies an existing CSS property or creates a new CSS property in the declaration block.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}</dt>
  <dd><strong>Only supported via getComputedStyle in Firefox.</strong> Returns the property value as a {{DOMxRef("CSSPrimitiveValue")}} or <code>null</code> for <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a>.</dd>
 </dl>
 
@@ -72,31 +73,11 @@ console.log(styleObj.cssText);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Merged the <strong>DOM Level 2 Style</strong> <code>CSS2Properties</code> interface into <code>CSSStyleDeclaration</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSStyleDeclaration")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

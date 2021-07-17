@@ -11,7 +11,9 @@ tags:
   - tilemap
   - tiles
 ---
-<div>{{GamesSidebar}}</div><p class="summary">Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called <strong>tiles</strong>. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> and <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> (although the same high level techniques could be used in any programming language.)</p>
+<div>{{GamesSidebar}}</div>
+
+<p class="summary">Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called <strong>tiles</strong>. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> and <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> (although the same high level techniques could be used in any programming language.)</p>
 
 <p>Besides the performance gains, tilemaps can also be mapped to a logical grid, which can be used in other ways inside the game logic (for example creating a path-finding graph, or handling collisions) or to create a level editor.</p>
 
@@ -21,7 +23,7 @@ tags:
 
 <p>The most efficient way to store the tile images is in an atlas or spritesheet. This is all of the required tiles grouped together in a single image file. When it's time to draw a tile, only a small section of this bigger image is rendered on the game canvas. The below images shows a tile atlas of 8 x 4 tiles:</p>
 
-<p><img alt="Tile atlas image" src="https://mdn.mozillademos.org/files/11697/tile_atlas.png" style="display: block; height: 256px; margin: 0px auto; width: 511px;"></p>
+<p><img alt="Tile atlas image" src="tile_atlas.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Using an atlas also has the advantage of naturally assigning every tile an <strong>index</strong>. This index is perfect to use as the tile identifier when creating the tilemap object.</p>
 
@@ -37,7 +39,7 @@ tags:
  <li><strong>Logic grid</strong>: This can be a collision grid, a path-finding grid, etc., depending on the type of game.</li>
 </ul>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note</strong>: For the visual grid, a special value (usually a negative number, <code>0</code> or <code>null</code>) is needed to represent empty tiles.</p>
 </div>
 
@@ -66,7 +68,7 @@ tags:
 }
 </pre>
 
-<p>You can read more about this and see an example implementation in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps">Square tilemaps implementation: Static maps</a>.</p>
+<p>You can read more about this and see an example implementation in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps">Square tilemaps implementation: Static maps</a>.</p>
 
 <h3 id="Scrolling_tilemaps">Scrolling tilemaps</h3>
 
@@ -92,7 +94,7 @@ function screenToWorld(x,y) {
 
 <p>A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the <code>worldToScreen()</code> example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. <strong>Only tiles that are at visible should be rendered</strong> ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.</p>
 
-<p>You can read more about implementing scrolling tilemaps and see some example implementations in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Scrolling_maps">Square tilemaps implementation: Scrolling maps</a>.</p>
+<p>You can read more about implementing scrolling tilemaps and see some example implementations in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps">Square tilemaps implementation: Scrolling maps</a>.</p>
 
 <h3 id="Layers">Layers</h3>
 
@@ -102,13 +104,13 @@ function screenToWorld(x,y) {
 
 <p>The following screenshot shows an example of both points: a character appearing <em>behind</em> a tile (the knight appearing behind the top of a tree) and a tile (the bush) being rendered over different terrain types.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11699/Screen%20Shot%202015-10-06%20at%2015.56.05.png" style="display: block; height: 256px; margin: 0px auto; width: 256px;"></p>
+<p><img alt="" src="screen_shot_2015-10-06_at_15.56.05.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="The_logic_grid">The logic grid</h3>
 
 <p>Since tilemaps are an actual grid of visual tiles, it is common to create a mapping between this visual grid and a logic grid. The most common case is to use this logic grid to handle collisions, but other uses are possible as well: character spawning points, detecting whether some elements are placed together in the right way to trigger a certain action (like in <em>Tetris</em> or <em>Bejeweled</em>), path-finding algorithms, etc.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can take a look at our demo that shows <a href="https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html">how to use a logic grid to handle collisions</a>.</p>
 </div>
 
@@ -116,7 +118,7 @@ function screenToWorld(x,y) {
 
 <p>Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy or RPG games. Some of these games include <em>SimCity 2000</em>, <em>Pharaoh</em> or <em>Final Fantasy Tactics</em>. The below image shows an example of an atlas for an isometric tileset.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11777/iso_tiles.png" style="display: block; height: 256px; margin: 0px auto; width: 628px;"></p>
+<p><img alt="" src="iso_tiles.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Performance">Performance</h2>
 
@@ -136,7 +138,7 @@ function screenToWorld(x,y) {
  <li>Related articles on the MDN:
   <ul>
    <li><a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps">Static square tile maps implementation with Canvas API</a></li>
-   <li><a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Scrolling_maps">Scrolling square tile maps implementation with Canvas API</a></li>
+   <li><a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps">Scrolling square tile maps implementation with Canvas API</a></li>
   </ul>
  </li>
  <li>External resources:

@@ -48,12 +48,12 @@ tags:
   ...
 &lt;/table&gt;</pre>
 
-<p>As you can infer from the brief example above, the caption is meant to contain a description of the table contents. This is useful for all readers wishing to get a quick idea of whether the table is useful to them as they scan the page, but particularly for blind users. Rather than have a screenreader read out the contents of many cells just to find out what the table is about, he or she can rely on a caption and then decide whether or not to read the table in greater detail.</p>
+<p>As you can infer from the brief example above, the caption is meant to contain a description of the table contents. This is useful for all readers wishing to get a quick idea of whether the table is useful to them as they scan the page, but particularly for blind users. Rather than have a screenreader read out the contents of many cells just to find out what the table is about, the user can rely on a caption and then decide whether or not to read the table in greater detail.</p>
 
 <p>A caption is placed directly beneath the <code>&lt;table&gt;</code> tag.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The {{htmlattrxref("summary","table")}} attribute can also be used on the <code>&lt;table&gt;</code> element to provide a description — this is also read out by screenreaders. We'd recommend using the <code>&lt;caption&gt;</code> element instead, however, as <code>summary</code> is {{glossary("deprecated")}} by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page.)</p>
+<p><strong>Note</strong>: The {{htmlattrxref("summary","table")}} attribute can also be used on the <code>&lt;table&gt;</code> element to provide a description — this is also read out by screenreaders. We'd recommend using the <code>&lt;caption&gt;</code> element instead, however, as <code>summary</code> is deprecated by the HTML5 spec, and can't be read by sighted users (it doesn't appear on the page.)</p>
 </div>
 
 <h3 id="Active_learning_Adding_a_caption">Active learning: Adding a caption</h3>
@@ -61,7 +61,7 @@ tags:
 <p>Let's try this out, revisiting an example we first met in the previous article.</p>
 
 <ol>
- <li>Open up your language teacher's school timetable from the end of <a href="/en-US/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col">HTML Table Basics</a>, or make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> file.</li>
+ <li>Open up your language teacher's school timetable from the end of <a href="/en-US/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col">HTML Table Basics</a>, or make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> file.</li>
  <li>Add a suitable caption for the table.</li>
  <li>Save your code and open it in a browser to see what it looks like.</li>
 </ol>
@@ -113,15 +113,12 @@ tfoot {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules (<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> is a good place to start; we also have an article specifically on <a href="/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">styling tables</a>).</p>
+<p><strong>Note</strong>: We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules (<a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a> is a good place to start; we also have an article specifically on <a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">styling tables</a>).</p>
 </div>
 
 <p>Your finished table should look something like the following:</p>
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -226,9 +223,9 @@ tfoot {
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
+</pre>
 
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active_learning_Adding_table_structure', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can also find it on Github as <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">see it live also</a>).</p>
@@ -268,35 +265,17 @@ tfoot {
 
 <p>The output of which looks something like this:</p>
 
-<table id="table1">
- <tbody>
-  <tr>
-   <th>title1</th>
-   <th>title2</th>
-   <th>title3</th>
-  </tr>
-  <tr>
-   <td id="nested">
-    <table id="table2">
-     <tbody>
-      <tr>
-       <td>cell1</td>
-       <td>cell2</td>
-       <td>cell3</td>
-      </tr>
-     </tbody>
-    </table>
-   </td>
-   <td>cell2</td>
-   <td>cell3</td>
-  </tr>
-  <tr>
-   <td>cell4</td>
-   <td>cell5</td>
-   <td>cell6</td>
-  </tr>
- </tbody>
-</table>
+<pre class="brush: css hidden">
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+</pre>
+
+{{EmbedLiveSample("Nesting_Tables")}}
 
 <h2 id="Tables_for_visually_impaired_users">Tables for visually impaired users</h2>
 
@@ -368,7 +347,7 @@ tfoot {
 <p>But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screenreader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are around 253 Million people living with Visual Impairment according to <a href="http://www.who.int/mediacentre/factsheets/fs282/en/" title="Vision Impairment Data">WHO data in 2017</a>.</p>
+<p><strong>Note</strong>: There are around 253 Million people living with Visual Impairment according to <a href="https://www.who.int/mediacentre/factsheets/fs282/en/" title="Vision Impairment Data">WHO data in 2017</a>.</p>
 </div>
 
 <p>This section of the article provides further techniques for making tables as accessible as possible.</p>
@@ -377,7 +356,7 @@ tfoot {
 
 <p>Screenreaders will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screenreader users can interpret the table similarly to how a sighted user does.</p>
 
-<p>We already covered headers in our previous article — see <a href="/en-US/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements">Adding headers with &lt;th&gt; elements</a>.</p>
+<p>We already covered headers in our previous article — see <a href="/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_%3cth%3e_elements">Adding headers with &lt;th&gt; elements</a>.</p>
 
 <h3 class="attTitle" id="The_scope_attribute">The scope attribute</h3>
 
@@ -413,7 +392,7 @@ tfoot {
 
 <ol>
  <li>You add a unique <code>id</code> to each <code>&lt;th&gt;</code> element.</li>
- <li>You add a <code>headers</code> attribute to each <code>&lt;td&gt;</code> element. Each <code>headers</code> attribute has to contain a list of the <code>id</code>s of all the &lt;th&gt; elements that act as a header for that cell, separated by spaces.</li>
+ <li>You add a <code>headers</code> attribute to each <code>&lt;td&gt;</code> element. Each <code>headers</code> attribute has to contain a list of the <code>id</code>s of all the <code>&lt;th&gt;</code> elements that act as a header for that cell, separated by spaces.</li>
 </ol>
 
 <p>This gives your HTML table an explicit definition of the position of each cell in the table, defined by the header(s) for each column and row it is part of, kind of like a spreadsheet. For it to work well, the table really needs both column and row headers.</p>
@@ -460,16 +439,14 @@ tfoot {
 
 <h2 id="Summary">Summary</h2>
 
-<p>There are a few other things you could learn about table HTML, but we have really given all you need to know at this moment in time. At this point, you might want to go and learn about styling HTML tables — see <a href="/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling Tables</a>.</p>
+<p>There are a few other things you could learn about table HTML, but we have really given all you need to know at this moment in time. At this point, you might want to go and learn about styling HTML tables — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling Tables</a>.</p>
 
 <div>{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}</div>
 
-<div>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Basics">HTML table basics</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a></li>
+ <li><strong>HTML table advanced features and accessibility</strong></li>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Structuring_planet_data">Structuring planet data</a></li>
 </ul>
-</div>

@@ -2,13 +2,14 @@
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
 tags:
-- API
-- AudioContext
-- BaseAudioContext
-- Method
-- Reference
-- Web Audio API
-- createBufferSource
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - Method
+  - Reference
+  - Web Audio API
+  - createBufferSource
+browser-compat: api.BaseAudioContext.createBufferSource
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -25,7 +26,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>source</var> = <var>baseAudioContext</var>.createBufferSource();</pre>
+  class="brush: js">var <var>source</var> = <var>baseAudioContext</var>.createBufferSource();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -45,7 +46,7 @@ tags:
       the source</a>.</p>
 </div>
 
-<pre class="brush: js highlight[31] notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js highlight[31]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -87,29 +88,15 @@ button.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffersource',
-        'createBufferSource()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createBufferSource")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

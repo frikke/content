@@ -7,10 +7,11 @@ tags:
   - CSSStyleRule
   - Property
   - Reference
+browser-compat: api.CSSStyleRule.style
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p>The read-only <strong><code>style</code></strong> property is the {{ domxref("CSSStyleDeclaration") }} interface for the <a class="external" href="https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> of the {{ DOMXref("CSSStyleRule") }}.</p>
+<p>The read-only <strong><code>style</code></strong> property is the {{ domxref("CSSStyleDeclaration") }} interface for the <a href="https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> of the {{ DOMXref("CSSStyleRule") }}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,7 +26,7 @@ tags:
   <dt>computed flag</dt>
   <dd>Unset.</dd>
   <dt>declarations</dt>
-  <dd>The declared declarations in the rule, in the order they were specified, shorthand properties exapanded to longhands.</dd>
+  <dd>The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.</dd>
   <dt>parent CSS rule</dt>
   <dd>The context object, which is an alias for <a href="https://heycam.github.io/webidl/#this">this</a>.</dd>
   <dt>owner node</dt>
@@ -35,7 +36,7 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>
-  The CSS includes one style rule. This will be the first {{domnxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. 
+  The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
   <code>myRules[0].style</code> therefore returns a {{domxref("CSSStyleDeclaration")}} object representing the declarations defined for <code>h1</code>.
 </p>
 
@@ -52,23 +53,8 @@ console.log(myRules[0].style); // a CSSStyleDeclaration representing the declara
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM", "#dom-cssstylerule-style", "CSSStyleRule: style")}}</td>
-   <td>{{Spec2("CSSOM")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSStyleRule.style")}}</p>
+<p>{{Compat}}</p>

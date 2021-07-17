@@ -15,6 +15,7 @@ tags:
 - UX
 - Video
 - metadata
+browser-compat: api.Navigator.mediaSession
 ---
 <p>{{APIRef}}</p>
 
@@ -31,12 +32,12 @@ tags:
   you receive events when the user engages device controls such as either onscreen or
   physical play, pause, seek, and other similar controls. An internet radio app, for
   example, can use <code>setActionHandler()</code> to let fhe media controls on a keyboard
-  or elsehwere on the user's device be used to control the app's media playback.</p>
+  or elsewhere on the user's device be used to control the app's media playback.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>mediaSession</em> = navigator.mediaSession;</pre>
+  class="brush: js">let <em>mediaSession</em> = navigator.mediaSession;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -64,29 +65,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Media
-        Session','#dom-navigator-mediasession','navigator.mediaSession')}}</td>
-      <td>{{Spec2('Media Session')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.Navigator.mediaSession")}}</p>
+<p>{{Compat}}</p>

@@ -19,7 +19,7 @@ tags:
 <p class="summary">A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to actually see them, lights and materials to make it look better, animations to make it look alive, etc.<strong> Three.js</strong>, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. <span class="seoSummary">In this article we'll take you through the real basics of using Three, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.</span></p>
 
 <div class="note">
-<p><strong>Note</strong>: We chose Three because it is one of the most popular <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> libraries, and it is easy to get started with. We are not trying to say it is better than any other WebGL library available, and you should feel free to try another library, such as <a href="http://www.ambiera.com/copperlicht/index.html">CopperLicht</a>, <a href="http://www.glge.org/">GLGE</a>, or <a href="https://playcanvas.com/">PlayCanvas</a>.</p>
+<p><strong>Note</strong>: We chose Three because it is one of the most popular <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> libraries, and it is easy to get started with. We are not trying to say it is better than any other WebGL library available, and you should feel free to try another library, such as <a href="https://www.ambiera.com/copperlicht/index.html">CopperLicht</a>, <a href="http://www.glge.org/">GLGE</a>, or <a href="https://playcanvas.com/">PlayCanvas</a>.</p>
 </div>
 
 <h2 id="Environment_setup">Environment setup</h2>
@@ -29,8 +29,8 @@ tags:
 <ul>
  <li>Make sure you are using a modern browser with good <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> support, such as the latest Firefox or Chrome.</li>
  <li>Create a directory to store your experiments in.</li>
- <li>Save a copy of the <a href="http://threejs.org/build/three.min.js">latest minimized Three.js library</a> inside your directory.</li>
- <li>Open the <a href="http://threejs.org/docs/">Three.js documentation</a> in a separate tab — it is useful to refer to.</li>
+ <li>Save a copy of the <a href="https://threejs.org/build/three.min.js">latest minimized Three.js library</a> inside your directory.</li>
+ <li>Open the <a href="https://threejs.org/docs/">Three.js documentation</a> in a separate tab — it is useful to refer to.</li>
 </ul>
 
 <h2 id="HTML_structure">HTML structure</h2>
@@ -50,8 +50,8 @@ tags:
 &lt;body&gt;
 &lt;script src="three.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-	var WIDTH = window.innerWidth;
-	var HEIGHT = window.innerHeight;
+	const WIDTH = window.innerWidth;
+	const HEIGHT = window.innerHeight;
 	/* all our JavaScript code goes here */
 &lt;/script&gt;
 &lt;/body&gt;
@@ -80,7 +80,7 @@ document.body.appendChild(renderer.domElement);
 
 <p>A scene is the place where everything happens. When creating new objects in the demo, we add them all inside the scene to become visible on the screen. In three.js, the scene is represented by a <code>Scene</code> object. Let's create it, by adding the following line below our previous lines:</p>
 
-<pre class="brush: js">var scene = new THREE.Scene();
+<pre class="brush: js">const scene = new THREE.Scene();
 </pre>
 
 <p>Later, we will be using the <code>.add()</code> method, to add objects to this scene.</p>
@@ -89,7 +89,7 @@ document.body.appendChild(renderer.domElement);
 
 <p>We have the rendered scene, but we still need to add a camera to view our handiwork — imagine a movie set without any cameras. The following lines put the camera in place in the 3D coordinate system, and point it in the direction of our scene, so we can finally see something:</p>
 
-<pre class="brush: js">var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
+<pre class="brush: js">const camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 </pre>
@@ -129,7 +129,7 @@ render();
 
 <p>Now our scene is properly rendering, we can start adding 3D shapes. To speed up development, Three.js provides a bunch of predefined primitives, which you can use to create shapes instantly in a single line of code. There's cubes, spheres, cylinders, and more complicated shapes available. Detail like drawing required vertices and faces, for a given shape, is handled by the Three framework, so we can focus on higher level coding. Let's start, by defining the geometry for a cube shape, adding the following just above the <code>render()</code> function:</p>
 
-<pre class="brush: js">var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+<pre class="brush: js">const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 </pre>
 
 <p>In this case, we define a simple cube that is 10 x 10 x 10 units. The geometry itself is not enough though, we also need a material that will be used for our shape.</p>
@@ -168,7 +168,7 @@ render();
 
 <p>Congratulations, you've created an object in a 3D environment! This might have proven easier than you first thought? Here's how it should look:</p>
 
-<p><img alt="Blue cube on a gray background rendered with Three.js." src="https://mdn.mozillademos.org/files/11849/cube.png" style="display: block; height: 400px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="Blue cube on a gray background rendered with Three.js." src="cube.png" style="display: block; margin: 0px auto;"></p>
 
 <p>And here's the code we have created so far:</p>
 
@@ -217,7 +217,7 @@ scene.add(light);
 
 <p>We define a white point of light, set its position a little away from the center of the scene, so it can light up some parts of the shapes, finally adding it to the scene. Now everything works as it should, all three shapes are visible. You should check the documentation for other types of lights, like Ambient, Directional, Hemisphere, or Spot. Experiment placing them on our scene, to see how they affect it.</p>
 
-<p><img alt="Shapes: blue cube, dark yellow torus and dark gray dodecahedron on a gray background rendered with Three.js." src="https://mdn.mozillademos.org/files/11851/shapes.png" style="height: 400px; width: 600px;"></p>
+<p><img alt="Shapes: blue cube, dark yellow torus and dark gray dodecahedron on a gray background rendered with Three.js." src="shapes.png"></p>
 
 <p>This looks a little boring though. In a game, something is usually happening. We might see animations and such. So let's try breathing a little life into these shapes, by animating them!</p>
 

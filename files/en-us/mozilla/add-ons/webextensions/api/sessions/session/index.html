@@ -11,6 +11,7 @@ tags:
   - Type
   - WebExtensions
   - sessions
+browser-compat: webextensions.api.sessions.Session
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -37,16 +38,14 @@ tags:
  <dt><code>lastModified</code></dt>
  <dd><code>number</code>. The time the tab or window was closed, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
  <dt><code>tab</code>{{optional_inline}}</dt>
- <dd><code>object</code>. If the object represents a closed tab, then this property is present and will be a {{WebExtAPIRef("tabs.Tab")}} object. This will contain <code>url</code>, <code>title</code>, and <code>favIconUrl</code> only if the extension has the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>object</code>. If the object represents a closed tab, then this property is present and will be a {{WebExtAPIRef("tabs.Tab")}} object. This will contain <code>url</code>, <code>title</code>, and <code>favIconUrl</code> only if the extension has the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> to access the tab's URL.</dd>
  <dt><code>window</code>{{optional_inline}}</dt>
  <dd><code>object</code>. If the object represents a closed window, then this property is present and will be a {{WebExtAPIRef("windows.Window")}} object.</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.sessions.Session")}}</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 

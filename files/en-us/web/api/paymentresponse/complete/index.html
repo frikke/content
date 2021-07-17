@@ -11,6 +11,7 @@ tags:
 - Reference
 - Secure context
 - complete
+browser-compat: api.PaymentResponse.complete
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
@@ -24,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>completePromise</em> = <em>paymentRequest</em>.complete(<em>result</em>);
+<pre class="brush: js"><em>completePromise</em> = <em>paymentRequest</em>.complete(<em>result</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -108,25 +109,8 @@ payment.show().then(function(paymentResponse) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment','#dom-paymentresponse-complete','PaymentResponse:
-        complete')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentResponse.complete")}}</p>
-</div>
+<p>{{Compat}}</p>

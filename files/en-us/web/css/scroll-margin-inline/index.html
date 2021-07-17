@@ -9,6 +9,7 @@ tags:
   - 'recipe:css-shorthand-property'
   - scroll-margin
   - scroll-margin-inline
+browser-compat: css.properties.scroll-margin-inline
 ---
 <div>{{CSSRef}}</div>
 
@@ -25,13 +26,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* &lt;length&gt; values */
+<pre class="brush: css">/* &lt;length&gt; values */
 scroll-margin-inline: 10px;
 scroll-margin-inline: 1em .5em ;
 
 /* Global values */
 scroll-margin-inline: inherit;
 scroll-margin-inline: initial;
+scroll-margin-inline: revert;
 scroll-margin-inline: unset;
 </pre>
 
@@ -52,7 +54,7 @@ scroll-margin-inline: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -66,7 +68,7 @@ scroll-margin-inline: unset;
 
 <p>The HTML that represents the blocks is very simple:</p>
 
-<pre class="brush: html notranslate">&lt;div class="scroller"&gt;
+<pre class="brush: html">&lt;div class="scroller"&gt;
   &lt;div&gt;1&lt;/div&gt;
   &lt;div&gt;2&lt;/div&gt;
   &lt;div&gt;3&lt;/div&gt;
@@ -77,7 +79,7 @@ scroll-margin-inline: unset;
 
 <p>Let's walk through the CSS. the outer container is styled like this:</p>
 
-<pre class="brush: css notranslate">.scroller {
+<pre class="brush: css">.scroller {
   text-align: left;
   width: 250px;
   height: 250px;
@@ -92,7 +94,7 @@ scroll-margin-inline: unset;
 
 <p>The child elements are styled as follows:</p>
 
-<pre class="brush: css notranslate">.scroller &gt; div {
+<pre class="brush: css">.scroller &gt; div {
   flex: 0 0 250px;
   width: 250px;
   background-color: #663399;
@@ -113,7 +115,7 @@ scroll-margin-inline: unset;
 
 <p>Last of all we specify the scroll margin values, a different one for the second and third child elements:</p>
 
-<pre class="brush: css notranslate">.scroller &gt; div:nth-child(2) {
+<pre class="brush: css">.scroller &gt; div:nth-child(2) {
   scroll-margin-inline: 1rem;
 }
 
@@ -135,28 +137,11 @@ scroll-margin-inline: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-inline", "scroll-margin-inline")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("css.properties.scroll-margin-inline")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

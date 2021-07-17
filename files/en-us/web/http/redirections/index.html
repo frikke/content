@@ -23,7 +23,7 @@ tags:
 
 <p>When browsers receive a redirect, they immediately load the new URL provided in the <code>Location</code> header. Besides the small performance hit of an additional round-trip, users rarely notice the redirection.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13785/HTTPRedirect.png"></p>
+<p><img alt="" src="httpredirect.png"></p>
 
 <p>There are several types of redirects, sorted into three categories:</p>
 
@@ -51,7 +51,7 @@ tags:
    <th scope="row"><code>301</code></th>
    <td><code>Moved Permanently</code></td>
    <td>{{HTTPMethod("GET")}} methods unchanged.<br>
-    Others may or may not be changed to {{HTTPMethod("GET")}}.<sup><a href="#attr1">[1]</a></sup></td>
+    Others may or may not be changed to {{HTTPMethod("GET")}}. (See <a href="#attr1">[1]</a>)</td>
    <td>Reorganization of a Web site.</td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ tags:
    <th scope="row"><code>302</code></th>
    <td><code>Found</code></td>
    <td>{{HTTPMethod("GET")}} methods unchanged.<br>
-    Others may or may not be changed to {{HTTPMethod("GET")}}.<sup><a href="#attr2">[2]</a></sup></td>
+    Others may or may not be changed to {{HTTPMethod("GET")}}. (See<a href="#attr2">[2]</a>)</td>
    <td>The Web page is temporarily unavailable for unforeseen reasons.</td>
   </tr>
   <tr>
@@ -145,7 +145,7 @@ tags:
 
 <p>HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its {{htmlattrxref("http-equiv", "meta")}} attribute set to <code>Refresh</code> in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta http-equiv="Refresh" content="0; URL=https://example.com/"&gt;
 &lt;/head&gt;
 </pre>
@@ -158,7 +158,7 @@ tags:
 
 <p>Redirections in JavaScript are performed by setting a URL string to the {{domxref("window.location")}} property, loading the new page:</p>
 
-<pre class="brush: js notranslate">window.location = "https://example.com/";</pre>
+<pre class="brush: js">window.location = "https://example.com/";</pre>
 
 <p>Like HTML redirections, this can't work on all resources, and obviously, this will only work on clients that execute JavaScript. On the other hand, there are more possibilities: for example, you can trigger the redirect only if some conditions are met.</p>
 
@@ -203,7 +203,7 @@ tags:
 
 <h3 id="Temporary_responses_to_unsafe_requests">Temporary responses to unsafe requests</h3>
 
-<p>{{Glossary("safe", "Unsafe")}} requests modify the state of the server and the user shouldn't resend them unintentionally.</p>
+<p>{{Glossary("Safe/HTTP", "Unsafe")}} requests modify the state of the server and the user shouldn't resend them unintentionally.</p>
 
 <p>Typically, you don't want your users to resend {{HTTPMethod("PUT")}}, {{HTTPMethod("POST")}} or {{HTTPMethod("DELETE")}} requests. If you serve the response as the result of this request, a simple press of the reload button will resend the request (possibly after a confirmation message).</p>
 
@@ -221,7 +221,7 @@ tags:
 
 <p>The <code><a href="https://httpd.apache.org/docs/current/mod/mod_alias.html">mod_alias</a></code> module has <code>Redirect</code> and <code>RedirectMatch</code> directives that set up {{HTTPStatus("302")}} redirects by default:</p>
 
-<pre class="notranslate">&lt;VirtualHost *:443&gt;
+<pre>&lt;VirtualHost *:443&gt;
 	ServerName example.com
 	Redirect / https://www.example.com
 &lt;/VirtualHost&gt;
@@ -231,24 +231,24 @@ tags:
 
 <p><code>RedirectMatch</code> does the same, but takes a {{glossary("regular expression")}} to define a collection of affected URLs:</p>
 
-<pre class="notranslate">RedirectMatch ^/images/(.*)$ https://images.example.com/$1</pre>
+<pre>RedirectMatch ^/images/(.*)$ https://images.example.com/$1</pre>
 
 <p>All documents in the <code>images/</code> directory will redirect to a different domain.</p>
 
 <p>If you don't want a temporary redirect, an extra parameter (either the HTTP status code to use or the <code>permanent</code> keyword) can be used to set up a different redirect:</p>
 
-<pre class="notranslate">Redirect permanent / https://www.example.com
+<pre>Redirect permanent / https://www.example.com
 # …acts the same as:
 Redirect 301 / https://www.example.com
 </pre>
 
-<p>The <code><a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a></code> module can also create redirects. It is more flexible, but a bit more complex.</p>
+<p>The <code><a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a></code> module can also create redirects. It is more flexible, but a bit more complex.</p>
 
 <h3 id="Nginx">Nginx</h3>
 
 <p>In Nginx, you create a specific server block for the content you want to redirect:</p>
 
-<pre class="notranslate">server {
+<pre>server {
 	listen 80;
 	server_name example.com;
 	return 301 $scheme://www.example.com$request_uri;
@@ -256,7 +256,7 @@ Redirect 301 / https://www.example.com
 
 <p>To apply a redirect to a directory or only certain pages, use the <code>rewrite</code> directive:</p>
 
-<pre class="notranslate">rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
+<pre>rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
 rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 </pre>
 
@@ -268,7 +268,7 @@ rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 
 <p>Redirection loops happen when additional redirections follow the one that has already been followed. In other words, there is a loop that will never be finished and no page will ever be found.</p>
 
-<p>Most of the time this is a server problem, and if the server cannot detect it, it will send back a {{HTTPStatus("500")}} <code>Internal Server Error</code>. If you encounter such an error soon after modifying a server configuration, this is likely a redirection loop.</p>
+<p>Most of the time this is a server problem, and if the server can detect it, it will send back a {{HTTPStatus("500")}} <code>Internal Server Error</code>. If you encounter such an error soon after modifying a server configuration, this is likely a redirection loop.</p>
 
 <p>Sometimes, the server won't detect it: a redirection loop can spread over several servers which each don't have the full picture. In this case, browsers will detect it and display an error message. Firefox displays:</p>
 

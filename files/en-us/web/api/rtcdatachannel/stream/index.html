@@ -2,16 +2,17 @@
 title: RTCDataChannel.stream
 slug: Web/API/RTCDataChannel/stream
 tags:
-- Non-standard
-- Obsolete
-- Property
-- RTCDataChannel
-- Read-only
-- Reference
-- WebRTC
-- stream
+  - Non-standard
+  - Deprecated
+  - Property
+  - RTCDataChannel
+  - Read-only
+  - Reference
+  - WebRTC
+  - stream
+browser-compat: api.RTCDataChannel.stream
 ---
-<p>{{APIRef("WebRTC")}}{{obsolete_header}}{{non-standard_header}}</p>
+<p>{{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}</p>
 
 <p><span class="seoSummary">The deprecated (and never part of the official specification)
     read-only <code>RTCDataChannel</code> property <code><strong>stream</strong></code>
@@ -29,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>stream</em> = <em>aDataChannel</em>.stream;
+<pre class="brush: js">var <em>stream</em> = <em>aDataChannel</em>.stream;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -45,12 +46,12 @@ console.log("Data channel stream ID: " + </code>dataChannel.stream<code>);</code
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.stream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
       channels</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>

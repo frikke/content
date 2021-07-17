@@ -10,6 +10,7 @@ tags:
   - NeedsContent
   - NeedsSyntax
   - Reference
+browser-compat: http.headers.Link
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Link: &lt; <var>uri-reference</var> &gt;; <var>param1</var>=<var>value1</var>; <var>param2</var>="<var>value2</var>"</pre>
+<pre class="brush: html">Link: &lt; <var>uri-reference</var> &gt;; <var>param1</var>=<var>value1</var>; <var>param2</var>="<var>value2</var>"</pre>
 
 <dl>
  <dt><code>&lt;uri-reference&gt;</code></dt>
@@ -32,43 +33,23 @@ tags:
 
 <p>The URI (absolute or relative) must be enclosed between <code>&lt;</code> and <code>&gt;</code>:</p>
 
-<pre class="brush: http; no-line-numbers example-good notranslate">Link: &lt;https://example.com&gt;; rel="preconnect"</pre>
+<pre class="brush: http; no-line-numbers example-good">Link: &lt;https://example.com&gt;; rel="preconnect"</pre>
 
-<pre class="brush: http; no-line-numbers example-bad notranslate">Link: https://bad.example; rel="preconnect"</pre>
+<pre class="brush: http; no-line-numbers example-bad">Link: https://bad.example; rel="preconnect"</pre>
 
 <h3 id="Specifying_multiple_links">Specifying multiple links</h3>
 
 <p>You can specify multiple links separated by commas, for example:</p>
 
-<pre class="notranslate">Link: &lt;https://one.example.com&gt;; rel="preconnect", &lt;https://two.example.com&gt;; rel="preconnect", &lt;https://three.example.com&gt;; rel="preconnect"</pre>
+<pre>Link: &lt;https://one.example.com&gt;; rel="preconnect", &lt;https://two.example.com&gt;; rel="preconnect", &lt;https://three.example.com&gt;; rel="preconnect"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC(8288, "Link Serialisation in HTTP Headers", 3)}}</td>
-   <td><span class="spec-RFC">IETF RFC</span></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{RFC(5988, "The Link Header Field", 5)}}</td>
-   <td><span class="spec-RFC">IETF RFC</span></td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Link")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

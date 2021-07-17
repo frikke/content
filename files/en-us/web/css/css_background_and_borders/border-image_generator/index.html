@@ -16,12 +16,12 @@ tags:
 
         &lt;div id="gallery"&gt;
             &lt;div id="image-gallery"&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6007/border-image-1.png" data-stateID="border1"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6009/border-image-2.png" data-stateID="border2"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6011/border-image-3.png" data-stateID="border3"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6013/border-image-4.png" data-stateID="border4"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6015/border-image-5.png" data-stateID="border5"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6017/border-image-6.svg" data-stateID="border6"/&gt;
+                &lt;img class="image" src="border-image-1.png" data-stateID="border1"/&gt;
+                &lt;img class="image" src="border-image-2.png" data-stateID="border2"/&gt;
+                &lt;img class="image" src="border-image-3.png" data-stateID="border3"/&gt;
+                &lt;img class="image" src="border-image-4.png" data-stateID="border4"/&gt;
+                &lt;img class="image" src="border-image-5.png" data-stateID="border5"/&gt;
+                &lt;img class="image" src="border-image-6.svg" data-stateID="border6"/&gt;
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -38,7 +38,7 @@ tags:
             &lt;div class="property"&gt;
                 &lt;div class="name"&gt;scale&lt;/div&gt;
                 &lt;div class="ui-input-slider" data-topic="scale"
-                    data-unit="%" data-max="300" data-sensivity="10"&gt;
+                    data-unit="%" data-max="300" data-sensitivity="10"&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class="separator"&gt;&lt;/div&gt;
@@ -107,17 +107,17 @@ tags:
                 &lt;/div&gt;
                 &lt;div class="property"&gt;
                     &lt;div class="ui-input-slider" data-topic="font-size" data-info="em size"
-                        data-unit="px" data-value="12" data-sensivity="3"&gt;
+                        data-unit="px" data-value="12" data-sensitivity="3"&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
 
                 &lt;div class="property"&gt;
                     &lt;div class="ui-input-slider" data-topic="preview-width" data-info="width"
-                         data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"&gt;&lt;/div&gt;
+                         data-unit=" px" data-min="10" data-max="10000" data-sensitivity="3"&gt;&lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div class="property"&gt;
                     &lt;div class="ui-input-slider" data-topic="preview-height" data-info="height"
-                        data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"&gt;
+                        data-unit=" px" data-min="10" data-max="10000" data-sensitivity="3"&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -143,6 +143,10 @@ tags:
                 &lt;div class="css-property"&gt;
                     &lt;span class="name"&gt; border-image-source: &lt;/span&gt;
                     &lt;span id="out-border-source" class="value"&gt;  &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="css-property"&gt;
+                    &lt;span class="name"&gt; border-style: &lt;/span&gt;
+                    &lt;span id="out-border-style" class="value"&gt;solid;&lt;/span&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
 
@@ -280,11 +284,11 @@ tags:
 .ui-input-slider-left, .ui-input-slider-right {
 	width: 16px;
 	cursor: pointer;
-	background: url("https://mdn.mozillademos.org/files/5679/arrows.png") center left no-repeat;
+	background: url("arrows.png") center left no-repeat;
 }
 
 .ui-input-slider-right {
-	background: url("https://mdn.mozillademos.org/files/5679/arrows.png") center right no-repeat;
+	background: url("arrows.png") center right no-repeat;
 }
 
 .ui-input-slider-name {
@@ -324,7 +328,7 @@ tags:
 	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 	font-size: 12px;
 
-	background-image: url("https://mdn.mozillademos.org/files/6037/drop_arrow_icon.png");
+	background-image: url("drop_arrow_icon.png");
 	background-position: right center;
 	background-repeat: no-repeat;
 	background-color: #359740;
@@ -455,7 +459,7 @@ tags:
 	line-height: 1em;
 
 	background-color: #888;
-	background-image: url("https://mdn.mozillademos.org/files/5683/disabled.png");
+	background-image: url("disabled.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 
@@ -481,7 +485,7 @@ tags:
 }
 
 .ui-checkbox &gt; input:checked + label {
-	background-image: url("https://mdn.mozillademos.org/files/5681/checked.png");
+	background-image: url("checked.png");
 	background-color: #379B4A;
 }
 
@@ -499,7 +503,7 @@ body {
 
 	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 
-	/*background: url("https://mdn.mozillademos.org/files/6025/grain.png");*/
+	/*background: url("grain.png");*/
 	border: 1px solid #EEE;
 
 	-moz-box-sizing: border-box;
@@ -590,7 +594,7 @@ body[data-move='Y'] {
 	margin: 10px;
 	color: #FFF;
 
-	background-image: url('https://mdn.mozillademos.org/files/6005/arrow-up-white.png');
+	background-image: url('arrow-up-white.png');
 	background-repeat: no-repeat;
 	background-position: top 4px center;
 	background-color: #888888 !important;
@@ -604,12 +608,12 @@ body[data-move='Y'] {
 }
 
 #toggle-gallery[data-action='show'] {
-	background-image: url('https://mdn.mozillademos.org/files/6001/arrow-down-white.png');
+	background-image: url('arrow-down-white.png');
 	background-color: #888888 !important;
 }
 
 #toggle-gallery[data-action='hide'] {
-	background-image: url('https://mdn.mozillademos.org/files/6005/arrow-up-white.png');
+	background-image: url('arrow-up-white.png');
 }
 
 .button {
@@ -636,7 +640,7 @@ body[data-move='Y'] {
 
 #load-remote {
 	width: 30px;
-	background-image: url('https://mdn.mozillademos.org/files/6003/arrow-right-white.png');
+	background-image: url('arrow-right-white.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -818,7 +822,7 @@ body[data-move='Y'] {
 #preview .resize-handle {
 	width: 10px;
 	height: 10px;
-	background: url("https://mdn.mozillademos.org/files/6027/resize.png") center center no-repeat;
+	background: url("resize.png") center center no-repeat;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -972,7 +976,7 @@ body[data-move='Y'] {
 	width: 20px;
 	height: 20px;
 	float: left;
-	background: url("https://mdn.mozillademos.org/files/6021/config.png") center center no-repeat;
+	background: url("config.png") center center no-repeat;
 	opacity: 0.5;
 }
 
@@ -1114,7 +1118,7 @@ body[data-move='Y'] {
 #unit-settings .close {
 	width: 16px;
 	height: 16px;
-	background: url('https://mdn.mozillademos.org/files/6019/close.png') no-repeat center center;
+	background: url('close.png') no-repeat center center;
 	background-size: 75%;
 
 	position: absolute;
@@ -1262,7 +1266,7 @@ var InputSliderManager = (function InputSliderManager() {
 
 		var sliderMotion = function sliderMotion(e) {
 			slider.style.cursor = "e-resize";
-			var delta = (e.clientX - startX) / obj.sensivity | 0;
+			var delta = (e.clientX - startX) / obj.sensitivity | 0;
 			var value = delta * obj.step + start_value;
 			setValue(obj.topic, value);
 		};
@@ -1278,7 +1282,7 @@ var InputSliderManager = (function InputSliderManager() {
 		var topic	= node.getAttribute('data-topic');
 		var unit	= node.getAttribute('data-unit');
 		var name 	= node.getAttribute('data-info');
-		var sensivity = node.getAttribute('data-sensivity') | 0;
+		var sensitivity = node.getAttribute('data-sensitivity') | 0;
 		var precision = node.getAttribute('data-precision') | 0;
 
 		this.min = isNaN(min) ? 0 : min;
@@ -1288,7 +1292,7 @@ var InputSliderManager = (function InputSliderManager() {
 		this.topic = topic;
 		this.node = node;
 		this.unit = unit === null ? '' : unit;
-		this.sensivity = sensivity &gt; 0 ? sensivity : 5;
+		this.sensitivity = sensitivity &gt; 0 ? sensitivity : 5;
 		value = isNaN(value) ? this.min : value;
 
 		var input = new InputComponent(this);
@@ -1390,14 +1394,14 @@ var InputSliderManager = (function InputSliderManager() {
 		setValue(topic, slider.value);
 	};
 
-	var setSensivity = function setSensivity(topic, value) {
+	var setSensitivity = function setSensitivity(topic, value) {
 		var slider = sliders[topic];
 		if (slider === undefined)
 			return;
 
 		value = value | 0;
 
-		slider.sensivity = value &gt; 0 ? value : 5;
+		slider.sensitivity = value &gt; 0 ? value : 5;
 	};
 
 	var getNode =  function getNode(topic) {
@@ -1461,7 +1465,7 @@ var InputSliderManager = (function InputSliderManager() {
 		subscribe : subscribe,
 		unsubscribe : unsubscribe,
 		setPrecision : setPrecision,
-		setSensivity : setSensivity,
+		setSensitivity : setSensitivity,
 		getPrecision : getPrecision,
 		createSlider : createSlider,
 	};
@@ -1478,7 +1482,7 @@ var DropDownManager = (function DropdownManager() {
 	var dropdowns = [];
 	var active = null;
 
-	var visbility = ["hidden", "visible"];
+	var visibility = ["hidden", "visible"];
 
 	var DropDown = function DropDown(node) {
 		var topic = node.getAttribute('data-topic');
@@ -1954,8 +1958,8 @@ var BorderImage = (function BorderImage() {
 		properties['border5'] = {
 			fill			: false,
 
-			slice_values	: [0, 12, 0, 12],
-			width_values	: [0, 12, 0, 12],
+			slice_values	: [12, 12, 12, 12],
+			width_values	: [12, 12, 12, 12],
 			outset_values	: [0, 0, 0, 0],
 
 			slice_units		: [0, 0, 0, 0],
@@ -2101,7 +2105,7 @@ var BorderImage = (function BorderImage() {
 			InputSliderManager.subscribe('scale', setScale);
 			InputSliderManager.setValue('scale', scale);
 			imgState = 'border1';
-			loadRemoteImage('https://mdn.mozillademos.org/files/6007/border-image-1.png');
+			loadRemoteImage('border-image-1.png');
 			toggleGallery();
 		};
 
@@ -2286,7 +2290,7 @@ var BorderImage = (function BorderImage() {
 			InputSliderManager.setStep('unit-precision', 1);
 			InputSliderManager.setMax('unit-precision', 2);
 			InputSliderManager.setValue('unit-precision', 2);
-			InputSliderManager.setSensivity('unit-precision', 20);
+			InputSliderManager.setSensitivity('unit-precision', 20);
 
 			InputSliderManager.setValue('unit-step', 1);
 			InputSliderManager.setStep('unit-step', 0.01);
@@ -2425,7 +2429,7 @@ var BorderImage = (function BorderImage() {
 			var slider = InputSliderManager.createSlider(topic, positions[labelID]);
 			var dropdown = DropDownManager.createDropDown(topic, dropdown_unit_options[optionsID]);
 
-			InputSliderManager.setSensivity(topic, 3);
+			InputSliderManager.setSensitivity(topic, 3);
 			InputSliderManager.setPrecision(topic, 1);
 
 			var property = document.createElement('div');

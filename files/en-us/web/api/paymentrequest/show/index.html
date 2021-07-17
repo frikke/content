@@ -13,6 +13,7 @@ tags:
 - Reference
 - Secure context
 - show
+browser-compat: api.PaymentRequest.show
 ---
 <div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
 
@@ -54,7 +55,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>paymentPromise</em> = <em>paymentRequest</em>.show(<em>detailsPromise</em>);
+<pre class="brush: js"><em>paymentPromise</em> = <em>paymentRequest</em>.show(<em>detailsPromise</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -278,27 +279,11 @@ document.getElementById("buyButton").onclick = requestPayment;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment','#show-method','show(optional detailsPromise)')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentRequest.show")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

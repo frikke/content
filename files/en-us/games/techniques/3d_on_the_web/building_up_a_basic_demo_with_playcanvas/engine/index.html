@@ -19,7 +19,7 @@ tags:
 
 <p>That's quite an impressive list of features — let's see some in action.</p>
 
-<p><img alt="PlayCanvas engine repository on GitHub." src="https://mdn.mozillademos.org/files/12257/playcanvas-github.png" style="display: block; height: 380px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="PlayCanvas engine repository on GitHub." src="playcanvas-github.png" style="display: block; margin: 0px auto;"></p>
 
 <p>We will try putting together a simple demo first — a cube rendered on the screen. If you have already worked through our <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Building up a basic demo with Three.js</a> article (or you are familiar with other 3D libraries) you'll notice that PlayCanvas works on similar concepts: camera, light and objects.</p>
 
@@ -30,8 +30,8 @@ tags:
 <ul>
  <li>Making sure you are using a modern browser with good <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> support, such as the latest Firefox or Chrome.</li>
  <li>Creating a directory to store your experiments in.</li>
- <li>Saving a copy of the <a href="http://code.playcanvas.com/playcanvas-latest.js">latest PlayCanvas engine</a> inside your directory.</li>
- <li>Opening the <a href="http://developer.playcanvas.com/en/user-manual/">PlayCanvas documentation</a> in a separate tab — it is useful to refer to.</li>
+ <li>Saving a copy of the <a href="https://code.playcanvas.com/playcanvas-latest.js">latest PlayCanvas engine</a> inside your directory.</li>
+ <li>Opening the <a href="https://developer.playcanvas.com/en/user-manual/">PlayCanvas documentation</a> in a separate tab — it is useful to refer to.</li>
 </ul>
 
 <h2 id="HTML_structure">HTML structure</h2>
@@ -139,7 +139,7 @@ light.rotate(45, 0, 0);
 
 <h2 id="Material">Material</h2>
 
-<p>The basic PlayCanvas material is called <a href="http://developer.playcanvas.com/en/api/pc.PhongMaterial.html">PhongMaterial</a> — add the following lines below the previous code.</p>
+<p>The basic PlayCanvas material is called <a href="https://developer.playcanvas.com/en/api/pc.PhongMaterial.html">PhongMaterial</a> — add the following lines below the previous code.</p>
 
 <pre class="brush: js">var boxMaterial = new pc.PhongMaterial();
 boxMaterial.diffuse.set(0, 0.58, 0.86);
@@ -157,7 +157,7 @@ box.model.model.meshInstances[0].material = boxMaterial;
 
 <p>Congratulations, you've created your first object in a 3D environment using PlayCanvas! It was easier than you thought, right? Here's how it should look:</p>
 
-<p><img alt="Blue cube on a gray background rendered with PlayCanvas." src="https://mdn.mozillademos.org/files/12247/cube-playcanvas.png" style="display: block; height: 430px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="Blue cube on a gray background rendered with PlayCanvas." src="cube-playcanvas.png" style="display: block; margin: 0px auto;"></p>
 
 <p>And here's the code we have created so far:</p>
 
@@ -211,7 +211,7 @@ cone.model.model.meshInstances[0].material = coneMaterial;
 
 <p>Here's how it should look right now:</p>
 
-<p><img alt="Shapes: blue cube, yellow cylinder and gray cone on a light gray background rendered with PlayCanvas." src="https://mdn.mozillademos.org/files/12249/shapes-playcanvas.png" style="display: block; height: 220px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="Shapes: blue cube, yellow cylinder and gray cone on a light gray background rendered with PlayCanvas." src="shapes-playcanvas.png" style="display: block; margin: 0px auto;"></p>
 
 <p>This works, but it is a bit boring. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.</p>
 

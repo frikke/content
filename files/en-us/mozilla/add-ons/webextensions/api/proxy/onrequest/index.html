@@ -10,6 +10,7 @@ tags:
   - Reference
   - WebExtensions
   - onRequest
+browser-compat: webextensions.api.proxy.onRequest
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -27,7 +28,7 @@ tags:
 
 <p>When the event is fired, the listener is called with an object containing information about the request. The listener returns a {{WebExtAPIRef("proxy.ProxyInfo")}} object representing a proxy to use (or an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects, enabling the browser to fail over if a proxy is unreachable).</p>
 
-<p>To use <code>proxy.onRequest</code>, an extension must have the "proxy" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> and the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for the URLs of the requests that it intercepts, which means that the match patterns in the <code>filter</code> argument must be a subset of the extension's host permissions.</p>
+<p>To use <code>proxy.onRequest</code>, an extension must have the "proxy" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a> for the URLs of the requests that it intercepts, which means that the match patterns in the <code>filter</code> argument must be a subset of the extension's host permissions.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -81,15 +82,13 @@ browser.proxy.onRequest.hasListener(listener)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.proxy.onRequest", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>This code intercepts requests to <code>&lt;all_urls&gt;</code>, and proxies them if they are not for a top-level frame.</p>
 
-<pre class="notranslate brush: js">function shouldProxyRequest(requestInfo) {
+<pre class="brush: js">function shouldProxyRequest(requestInfo) {
   return requestInfo.parentFrameId != -1;
 }
 

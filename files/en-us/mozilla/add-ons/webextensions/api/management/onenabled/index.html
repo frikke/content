@@ -9,12 +9,13 @@ tags:
   - WebExtensions
   - management
   - onEnabled
+browser-compat: webextensions.api.management.onEnabled
 ---
 <div>{{AddonSidebar()}}</div>
 
 <p><span class="seoSummary">The event listener called when the <code>enabled</code> event is fired, indicating that an add-on is now enabled.</span></p>
 
-<p>This API requires the "management" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -52,15 +53,13 @@ browser.management.onEnabled.hasListener(listener)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.management.onEnabled")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Log the names of add-ons when they are enabled:</p>
 
-<pre class="notranslate brush: js">browser.management.onEnabled.addListener((info) =&gt; {
+<pre class="brush: js">browser.management.onEnabled.addListener((info) =&gt; {
   console.log(info.name + " was enabled");
 });</pre>
 

@@ -2,14 +2,15 @@
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
 tags:
-- API
-- CacheStorage
-- Experimental
-- Method
-- Reference
-- Service Workers
-- ServiceWorker
-- has
+  - API
+  - CacheStorage
+  - Experimental
+  - Method
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - has
+browser-compat: api.CacheStorage.has
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -22,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">caches.has(<em>cacheName</em>).then(function(<em>boolean</em>) {
+<pre class="brush: js">caches.has(<em>cacheName</em>).then(function(<em>boolean</em>) {
   // true: your cache exists!
 });
 </pre>
@@ -47,7 +48,7 @@ tags:
 
 <pre class="brush: js">caches.has('v1').then(function(hasCache) {
   if (!hasCache) {
-    someCacheSetupfunction();
+    someCacheSetupFunction();
   } else {
     caches.open('v1').then(function(cache) {
       return cache.addAll(myAssets);
@@ -59,29 +60,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#cache-storage-has', 'CacheStorage: has')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CacheStorage.has")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>

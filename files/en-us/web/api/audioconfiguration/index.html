@@ -10,6 +10,7 @@ tags:
   - Media Capabilities API
   - Reference
   - Video
+browser-compat: api.AudioConfiguration
 ---
 <div>{{APIRef("Media Capabilities API")}}</div>
 
@@ -23,7 +24,7 @@ tags:
  <li><strong>contentType</strong>: A valid audio MIME type, For information on possible values and what they mean, see the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">web audio codec guide</a>.</li>
  <li><strong>channels</strong>: the number of channels used by the audio track.</li>
  <li><strong>bitrate</strong>: The number of bits used to encode one second of the audio file.</li>
- <li> <strong>samplerate</strong>: The number of audio samples making up one second of the audio file.<span style="display: none;"> </span></li>
+ <li> <strong>samplerate</strong>: The number of audio samples making up one second of the audio file.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -49,26 +50,11 @@ navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capabilities','#audioconfiguration','AudioConfiguration')}}</td>
-   <td>{{Spec2('Media Capabilities')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioConfiguration")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

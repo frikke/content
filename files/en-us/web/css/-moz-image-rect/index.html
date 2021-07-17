@@ -5,10 +5,11 @@ tags:
   - CSS
   - CSS Function
   - CSS Images
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Function
   - Non-standard
   - Reference
+browser-compat: css.types.-moz-image-rect
 ---
 <div>{{CSSRef}}{{Non-standard_Header}}</div>
 
@@ -16,12 +17,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">-moz-image-rect({{CSSxRef("&lt;uri&gt;")}}, <em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>);</pre>
+<pre class="brush: css">-moz-image-rect({{CSSxRef("url()")}}, <em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>);</pre>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt>{{CSSxRef("&lt;url&gt;")}}</dt>
+ <dt>{{CSSxRef("url()")}}</dt>
  <dd>The URI of the image from which to take the sub-image.</dd>
  <dt><code>top</code></dt>
  <dd>The top edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.</dd>
@@ -39,7 +40,7 @@ tags:
 
 <p>This works very similarly to the {{CSSxRef("-moz-image-region")}} property, which is used with the {{CSSxRef("list-style-image")}} property to use parts of an image as the bullets in lists. However, this can be used for any CSS background.</p>
 
-<p>The syntax for the rectangle is similar to the <a href="/en-US/docs/Web/CSS/shape#Syntax"><code>rect()</code></a> function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.</p>
+<p>The syntax for the rectangle is similar to the <a href="/en-US/docs/Web/CSS/shape#syntax"><code>rect()</code></a> function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -51,7 +52,7 @@ tags:
 
 <p>The container looks like this:</p>
 
-<pre class="brush: css notranslate">#container {
+<pre class="brush: css">#container {
   width:267px;
   height:272px;
   top:100px;
@@ -64,8 +65,8 @@ tags:
 
 <p>Then the four boxes defining the segments of the image are defined. Let's look at them one at a time.</p>
 
-<pre class="brush: css notranslate">#box1 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 50%, 50%, 0%);
+<pre class="brush: css">#box1 {
+  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
   width:133px;
   height:136px;
   position:absolute;
@@ -74,8 +75,8 @@ tags:
 
 <p>This is the top-left corner of the image. It defines a rectangle containing the top-left quarter of the image in the file <code>firefox.jpg</code>.</p>
 
-<pre class="brush: css notranslate">#box2 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 100%, 50%, 50%);
+<pre class="brush: css">#box2 {
+  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
   width:133px;
   height:136px;
   position:absolute;
@@ -86,14 +87,14 @@ tags:
 
 <p>The other corners follow a similar pattern:</p>
 
-<pre class="brush: css notranslate">#box3 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 50%, 50%, 100%, 0%);
+<pre class="brush: css">#box3 {
+  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
   width:133px;
   height:136px;
   position:absolute;
 }
 #box4 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 50%, 100%, 100%, 50%);
+  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
   width:133px;
   height:136px;
   position:absolute;
@@ -104,7 +105,7 @@ tags:
 
 <p>The HTML is quite simple:</p>
 
-<pre class="brush: html notranslate">&lt;div id="container" onclick="rotate()"&gt;
+<pre class="brush: html">&lt;div id="container" onclick="rotate()"&gt;
   &lt;div id="box1" style="left:0px;top:0px;"&gt;Top left&lt;/div&gt;
   &lt;div id="box2" style="left:133px;top:0px;"&gt;Top right&lt;/div&gt;
   &lt;div id="box3" style="left:0px;top:136px;"&gt;Bottom left&lt;/div&gt;
@@ -118,7 +119,7 @@ tags:
 
 <p>This code handles the click event when the container receives a mouse click.</p>
 
-<pre class="brush:js notranslate">function rotate() {
+<pre class="brush:js">function rotate() {
   var prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
 
   // Now that we've saved the last one, start rotating
@@ -146,7 +147,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.-moz-image-rect")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

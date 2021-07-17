@@ -6,6 +6,7 @@ tags:
   - DOM
   - Interface
   - NodeList
+browser-compat: api.NodeList
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -27,7 +28,7 @@ tags:
 
 <p>For example, {{domxref("Node.childNodes")}} is live:</p>
 
-<pre class="brush: js notranslate">const parent = document.getElementById('parent');
+<pre class="brush: js">const parent = document.getElementById('parent');
 let child_nodes = parent.childNodes;
 console.log(child_nodes.length); // let's assume "2"
 parent.appendChild(document.createElement('div'));
@@ -67,7 +68,7 @@ console.log(child_nodes.length); // outputs "3"
 
 <p>It's possible to loop over the items in a <code>NodeList</code> using a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop:</p>
 
-<pre class="brush: js notranslate">for (let i = 0; i &lt; myNodeList.length; i++) {
+<pre class="brush: js">for (let i = 0; i &lt; myNodeList.length; i++) {
   let item = myNodeList[i];
 }
 </pre>
@@ -76,7 +77,7 @@ console.log(child_nodes.length); // outputs "3"
 
 <p><code><a href="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a></code> loops <strong>will</strong> loop over <code>NodeList</code> objects correctly:</p>
 
-<pre class="brush: js notranslate">const list = document.querySelectorAll('input[type=checkbox]');
+<pre class="brush: js">const list = document.querySelectorAll('input[type=checkbox]');
 for (let checkbox of list) {
   checkbox.checked = true;
 }</pre>
@@ -85,45 +86,15 @@ for (let checkbox of list) {
 
 <p>There is also an Internet Explorer-compatible way to use {{jsxref("Array.forEach()", "Array.prototype.forEach")}} for iteration:</p>
 
-<pre class="brush: js notranslate">const list = document.querySelectorAll('input[type=checkbox]');
+<pre class="brush: js">const list = document.querySelectorAll('input[type=checkbox]');
 Array.prototype.forEach.call(list, function (checkbox) {
   checkbox.checked = true;
 });</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM3 Core') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM2 Core') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}}</td>
-   <td>{{ Spec2('DOM1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.NodeList")}}</p>
+<p>{{Compat}}</p>

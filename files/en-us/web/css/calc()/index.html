@@ -11,6 +11,7 @@ tags:
   - Reference
   - Web
   - calc
+browser-compat: css.types.calc
 ---
 <div>{{CSSRef}}</div>
 
@@ -18,11 +19,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/function-calc.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* property: calc(expression) */
+<pre class="brush: css no-line-numbers">/* property: calc(expression) */
 width: calc(100% - 80px);</pre>
 
 <p>The <code>calc()</code> function takes a single expression as its parameter, with the expression's result used as the value. The expression can be any simple expression combining the following operators, using standard <a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Operator_precedence">operator precedence rules</a>:</p>
@@ -52,13 +52,13 @@ width: calc(100% - 80px);</pre>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
 <p>When <code>calc()</code> is used for controlling text size, be sure that one of the values includes a <a href="/en-US/docs/Web/CSS/length#Relative_length_units">relative length unit</a>, for example:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: calc(1.5rem + 3vw);
 }</pre>
 
@@ -71,15 +71,15 @@ width: calc(100% - 80px);</pre>
 
 <h2 id="Usage_with_integers">Usage with integers</h2>
 
-<p>When <strong><code>calc()</code></strong> is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example:</p>
+<p>When <strong><code>calc()</code></strong> is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. For example:</p>
 
-<pre class="brush: css notranslate">.modal {
+<pre class="brush: css">.modal {
   z-index: calc(3 / 2);
 }</pre>
 
 <p>This will give <code>.modal</code> a final <code>z-index</code> value of 2.</p>
 
-<p><strong>Note:</strong> The Chrome browser currently won’t accept some values returned by <strong><code>calc()</code></strong> when an integer is expected. This includes any division, even if it results in an integer. ie. <code>z-index: calc(4 / 2);</code> will not be accepted.</p>
+<p><strong>Note:</strong> The Chrome browser currently won't accept some values returned by <strong><code>calc()</code></strong> when an integer is expected. This includes any division, even if it results in an integer. ie. <code>z-index: calc(4 / 2);</code> will not be accepted.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -87,7 +87,7 @@ width: calc(100% - 80px);</pre>
 
 <p><code>calc()</code> makes it easy to position an object with a set margin. In this example, the CSS creates a banner that stretches across the window, with a 40-pixel gap between both sides of the banner and the edges of the window:</p>
 
-<pre class="brush: css notranslate">.banner {
+<pre class="brush: css">.banner {
   position: absolute;
   left: 40px;
   width: calc(100% - 80px);
@@ -100,7 +100,7 @@ width: calc(100% - 80px);</pre>
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="banner"&gt;This is a banner!&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="banner"&gt;This is a banner!&lt;/div&gt;</pre>
 
 <p>{{EmbedLiveSample('Positioning_an_object_on_screen_with_a_margin', 'auto', '60')}}</p>
 
@@ -110,7 +110,7 @@ width: calc(100% - 80px);</pre>
 
 <p>Let's look at some CSS:</p>
 
-<pre class="brush: css notranslate">input {
+<pre class="brush: css">input {
   padding: 2px;
   display: block;
   width: calc(100% - 1em);
@@ -125,7 +125,7 @@ width: calc(100% - 80px);</pre>
 
 <p>Here, the form itself is established to use 1/6 of the available window width. Then, to ensure that input fields retain an appropriate size, we use <code>calc()</code> again to establish that they should be the width of their container minus 1em. Then, the following HTML makes use of this CSS:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div id="formbox"&gt;
   &lt;label&gt;Type something:&lt;/label&gt;
   &lt;input type="text"&gt;
@@ -139,7 +139,7 @@ width: calc(100% - 80px);</pre>
 
 <p>You can also use <code>calc()</code> with <a href="/en-US/docs/Web/CSS/CSS_Variables">CSS variables</a>. Consider the following code:</p>
 
-<pre class="brush: css notranslate">.foo {
+<pre class="brush: css">.foo {
   --widthA: 100px;
   --widthB: calc(var(--widthA) / 2);
   --widthC: calc(var(--widthB) / 2);
@@ -150,26 +150,11 @@ width: calc(100% - 80px);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#calc-notation', 'calc()')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.calc")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

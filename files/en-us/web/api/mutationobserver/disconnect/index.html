@@ -18,6 +18,7 @@ tags:
 - Watching
 - mutation
 - stop
+browser-compat: api.MutationObserver.disconnect
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
@@ -28,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>mutationObserver</var>.disconnect()
+<pre class="brush: js"><var>mutationObserver</var>.disconnect()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -55,7 +56,7 @@ tags:
 <p>This example creates an observer, then disconnects from it, leaving it available for
   possible reuse.</p>
 
-<pre class="brush: js notranslate">const targetNode = document.querySelector("#someElement");
+<pre class="brush: js">const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
   attributes: true
@@ -70,24 +71,8 @@ observer.disconnect();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-disconnect',
-        'MutationObserver.disconnect()')}}</td>
-      <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MutationObserver.disconnect")}}</p>
+<p>{{Compat}}</p>

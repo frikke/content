@@ -8,6 +8,7 @@ tags:
   - Permissions
   - Reference
   - WebExtensions
+browser-compat: webextensions.api.permissions
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -20,7 +21,7 @@ tags:
  <li>The extension can rely on the access to the APIs it needs, because if already running, the permissions have been granted.</li>
 </ul>
 
-<p>There is not yet a simple GUI, for users to view permissions of their installed WebExtension Add-ons.  Users must use about:debugging, go to the Add-ons section, then use the "Manifest Url" link for this Add-on. This shows raw json, which includes a "permissions" block, showing the permissions used by this addon.</p>
+<p>In most major browsers, users can see if their installed extensions request advanced permissions through the browser's extensions manager. </p>
 
 <p>With the permissions API, an extension can ask for additional permissions at runtime. These permissions need to be listed in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> manifest.json key. Note that some permissions are not allowed in <code>optional_permissions</code>. The main advantages of this are:</p>
 
@@ -28,7 +29,7 @@ tags:
  <li>The extension can run with a smaller set of permissions, except when it actually needs them.</li>
  <li>The extension can handle permission denial in a graceful manner, instead of presenting the user with a global "all or nothing" choice at install time. You can still get a lot out of that map extension, without giving it access to your location, for example.</li>
  <li>
-  <p>The extension may need <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a>, but not know at install time which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime, can be an alternative to asking for "&lt;all_urls&gt;" at install time.</p>
+  <p>The extension may need <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, but not know at install time which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime, can be an alternative to asking for "&lt;all_urls&gt;" at install time.</p>
  </li>
 </ul>
 
@@ -36,7 +37,7 @@ tags:
 
 <p>Starting with Firefox 84, users will be able to manage optional permissions of installed extensions from the Add-ons Manager. Extensions that use optional permissions should listen for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded">browser.permissions.onAdded</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved">browser.permissions.onRemoved</a> API events to know when a user grants or revokes these permissions.</p>
 
-<p>For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions#Request_permissions_at_runtime">Request permissions at runtime</a>.</p>
+<p>For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/#request_permissions_at_runtime">Request permissions at runtime</a>.</p>
 
 <h2 id="Types">Types</h2>
 
@@ -69,7 +70,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.permissions")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,6 +9,7 @@ tags:
 - Reference
 - WebRTC
 - remoteDescription
+browser-compat: api.RTCPeerConnection.remoteDescription
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
@@ -25,7 +26,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"> var <em>sessionDescription</em> = <em>peerConnection</em>.remoteDescription;</pre>
+  class="brush: js"> var <em>sessionDescription</em> = <em>peerConnection</em>.remoteDescription;</pre>
 
 <p>On a more fundamental level, the returned value is the value of
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}} if that property isn't
@@ -55,27 +56,11 @@ else {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-remotedescription',
-        'RTCPeerConnection.remoteDescription') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.remoteDescription")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

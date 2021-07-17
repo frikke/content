@@ -2,25 +2,26 @@
 title: AudioParam.setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
 tags:
-- API
-- AudioParam
-- Method
-- Reference
-- Web Audio API
-- setValueAtTime
+  - API
+  - AudioParam
+  - Method
+  - Reference
+  - Web Audio API
+  - setValueAtTime
+browser-compat: api.AudioParam.setValueAtTime
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <p class="summary">The <code>setValueAtTime()</code> method of the
   {{domxref("AudioParam")}} interface schedules an instant change to the
   <code>AudioParam</code> value at a precise time, as measured against
-  {{domxref("AudioContext.currentTime")}}. The new value is given in the value parameter.
+  {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given in the value parameter.
 </p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var AudioParam = AudioParam.setValueAtTime(<em>value</em>, <em>startTime</em>)</pre>
+  class="brush: js">var AudioParam = AudioParam.setValueAtTime(<em>value</em>, <em>startTime</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -91,29 +92,15 @@ targetAtTimeMinus.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audioparam-setvalueattime',
-        'setValueAtTime')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioParam.setValueAtTime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

@@ -17,6 +17,7 @@ tags:
 - WebRTC API
 - firstRequestTimestamp
 - timeStamp
+browser-compat: api.RTCIceCandidatePairStats.firstRequestTimeStamp
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
@@ -28,7 +29,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>firstRequestTimestamp</em> = <em>rtcIceCandidatePairStats</em>.firstRequestTimestamp;</pre>
+  class="brush: js"><em>firstRequestTimestamp</em> = <em>rtcIceCandidatePairStats</em>.firstRequestTimestamp;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -41,30 +42,13 @@ tags:
   {{domxref("RTCIceCandidatePairStats.requestsSent", "requestsSent")}} to compute the
   average interval between consecutive connectivity checks:</p>
 
-<pre class="brush: js notranslate">avgCheckInterval = (candidatePairStats.lastRequestTimestamp -
+<pre class="brush: js">avgCheckInterval = (candidatePairStats.lastRequestTimestamp -
                     candidatePairStats.firstRequestTimestamp) /
                    candidatePairStats.requestsSent;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcicecandidatepairstats-firstrequesttimestamp',
-        'RTCIceCandidatePairStats.firstRequestTimestamp') }}</td>
-      <td>{{ Spec2('WebRTC Statistics Identifiers') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -73,4 +57,4 @@ tags:
     updated.</p>
 </div>
 
-<p>{{Compat("api.RTCIceCandidatePairStats.firstRequestTimeStamp")}}</p>
+<p>{{Compat}}</p>

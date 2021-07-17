@@ -9,6 +9,7 @@ tags:
   - Reference
   - replaceState
   - web animations api
+browser-compat: api.Animation.replaceState
 ---
 <p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
@@ -16,15 +17,15 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <em>myReplaceState</em> = <em>Animation</em>.replaceState;
+<pre class="brush: js">let <em>myReplaceState</em> = <em>Animation</em>.replaceState;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A string that represents the replace state of the anmation. The value can be one of:</p>
+<p>A string that represents the replace state of the animation. The value can be one of:</p>
 
 <ul>
- <li><code>active</code>: The initial value of the animation's replace state; when the animation has been removed by the browser's <a href="/en-US/docs/Web/API/Animation#Automatically_removing_filling_animations">Automatically removing filling animations</a> behavior.</li>
+ <li><code>active</code>: The initial value of the animation's replace state; when the animation has been removed by the browser's <a href="/en-US/docs/Web/API/Animation#automatically_removing_filling_animations">Automatically removing filling animations</a> behavior.</li>
  <li><code>persisted</code>: The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.</li>
  <li><code>removed</code>: The animation has been explicitly removed.</li>
 </ul>
@@ -58,27 +59,11 @@ document.body.addEventListener('mousemove', evt =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-replacestate', 'Animation.replaceState' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("api.Animation.replaceState")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

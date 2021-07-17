@@ -7,16 +7,17 @@ tags:
   - CSS Writing Modes
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.text-orientation
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>text-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the orientation of the text characters in a line. It only affects text in vertical mode (when {{cssxref("writing-mode")}} is not <code>horizontal-tb</code>).</span> It is useful for controlling the display of languages that use vertical script, and also for making vertical table headers.</p>
+<p>The <strong><code>text-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the orientation of the text characters in a line. It only affects text in vertical mode (when {{cssxref("writing-mode")}} is not <code>horizontal-tb</code>). It is useful for controlling the display of languages that use vertical script, and also for making vertical table headers.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/text-orientation.html")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 text-orientation: mixed;
 text-orientation: upright;
 text-orientation: sideways-right;
@@ -25,6 +26,7 @@ text-orientation: use-glyph-orientation;
 
 /* Global values */
 text-orientation: inherit;
+text-orientation: initial;
 text-orientation: initial;
 text-orientation: unset;
 </pre>
@@ -52,17 +54,17 @@ text-orientation: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Lorem ipsum dolet semper quisquam.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Lorem ipsum dolet semper quisquam.&lt;/p&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }</pre>
@@ -73,26 +75,11 @@ text-orientation: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Writing Modes', '#text-orientation', 'text-orientation')}}</td>
-   <td>{{Spec2('CSS3 Writing Modes')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-orientation")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

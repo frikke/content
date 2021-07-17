@@ -2,13 +2,14 @@
 title: AudioContext.baseLatency
 slug: Web/API/AudioContext/baseLatency
 tags:
-- API
-- Audio
-- AudioContext
-- Media
-- Property
-- Web Audio API
-- baseLatency
+  - API
+  - Audio
+  - AudioContext
+  - Media
+  - Property
+  - Web Audio API
+  - baseLatency
+browser-compat: api.AudioContext.baseLatency
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -27,7 +28,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>baseLatency</em> = <em>audioCtx</em>.baseLatency;</pre>
+  class="brush: js">var <em>baseLatency</em> = <em>audioCtx</em>.baseLatency;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -35,7 +36,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">// default latency ("interactive")
+<pre class="brush: js">// default latency ("interactive")
 const audioCtx1 = new AudioContext();
 console.log(audioCtx1.baseLatency); // 0.00
 
@@ -46,32 +47,16 @@ console.log(audioCtx2.baseLatency); // 0.15
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API','#dom-audiocontext-baselatency','baseLatency')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
+<p>{{Compat}}</p>
 
-  <p>{{Compat("api.AudioContext.baseLatency")}}</p>
+<h2 id="See_also">See also</h2>
 
-  <h2 id="See_also">See also</h2>
-
-  <ul>
-    <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-        API</a></li>
-    <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-  </ul>
-</div>
+<ul>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">
+      Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+</ul>

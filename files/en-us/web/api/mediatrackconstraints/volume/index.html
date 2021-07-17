@@ -1,5 +1,5 @@
 ---
-title: MediaTrackControls.volume
+title: MediaTrackConstraints.volume
 slug: Web/API/MediaTrackConstraints/volume
 tags:
 - API
@@ -14,8 +14,9 @@ tags:
 - Volume
 - WebRTC
 - getusermedia
+browser-compat: api.MediaTrackConstraints.volume
 ---
-<div>{{APIRef("Media Capture and Streams")}}{{obsolete_header}}</div>
+<div>{{APIRef("Media Capture and Streams")}}{{deprecated_header}}</div>
 
 <p>The {{domxref("MediaTrackConstraints")}} dictionary's
   <code><strong>volume</strong></code> property is a {{domxref("ConstrainDouble")}}
@@ -29,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>constraintsObject</em> = { volume: <em>constraint</em> };
+<pre class="brush: js">var <em>constraintsObject</em> = { volume: <em>constraint</em> };
 
 <em>constraintsObject</em>.volume = <em>constraint</em>;
 </pre>
@@ -57,7 +58,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaTrackConstraints.volume")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

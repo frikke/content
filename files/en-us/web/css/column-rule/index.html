@@ -7,10 +7,11 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.column-rule
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>column-rule</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width, style, and color of the line drawn between columns in a multi-column layout.</p>
+<p>The <strong><code>column-rule</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the width, style, and color of the line drawn between columns in a multi-column layout.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/column-rule.html")}}</div>
 
@@ -22,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">column-rule: dotted;
+<pre class="brush:css no-line-numbers">column-rule: dotted;
 column-rule: solid 8px;
 column-rule: solid blue;
 column-rule: thick inset blue;
@@ -30,6 +31,7 @@ column-rule: thick inset blue;
 /* Global values */
 column-rule: inherit;
 column-rule: initial;
+column-rule: revert;
 column-rule: unset;
 </pre>
 
@@ -52,13 +54,13 @@ column-rule: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Example_1">Example 1</h3>
 
-<pre class="brush: css notranslate">/* Same as "medium dotted currentcolor" */
+<pre class="brush: css">/* Same as "medium dotted currentcolor" */
 p.foo { column-rule: dotted; }
 
 /* Same as "medium solid blue" */
@@ -74,7 +76,7 @@ p.abc { column-rule: thick inset blue; }
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p class="content-box"&gt;
+<pre class="brush: html">&lt;p class="content-box"&gt;
   This is a bunch of text split into three columns.
   Take note of how the `column-rule` property is used
   to adjust the style, width, and color of the rule
@@ -84,7 +86,7 @@ p.abc { column-rule: thick inset blue; }
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.content-box {
+<pre class="brush: css">.content-box {
   padding: 0.3em;
   background: #ff7;
   column-count: 3;
@@ -98,26 +100,11 @@ p.abc { column-rule: thick inset blue; }
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#column-rule', 'column-rule')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.column-rule")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

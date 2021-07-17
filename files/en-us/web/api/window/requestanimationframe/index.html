@@ -16,6 +16,8 @@ tags:
 - Scheduling
 - Window
 - requestAnimationFrame
+- Polyfill
+browser-compat: api.Window.requestAnimationFrame
 ---
 <div>{{APIRef}}</div>
 
@@ -55,7 +57,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.requestAnimationFrame(<em>callback</em>);
+<pre class="brush: js">window.requestAnimationFrame(<em>callback</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -84,7 +86,7 @@ tags:
   milliseconds) with <code>0.1 * elapsed</code>. The element's final position is 200px
   (<code>0.1 * 2000</code>) to the right of its initial position.</p>
 
-<pre class="brush: js notranslate">const element = document.getElementById('some-element-you-want-to-animate');
+<pre class="brush: js">const element = document.getElementById('some-element-you-want-to-animate');
 let start;
 
 function step(timestamp) {
@@ -110,35 +112,11 @@ window.requestAnimationFrame(step);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change, supersedes the previous one.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('RequestAnimationFrame',
-        '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}}
-      </td>
-      <td>{{Spec2('RequestAnimationFrame')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <p>{{Compat("api.Window.requestAnimationFrame")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -163,4 +141,5 @@ window.requestAnimationFrame(step);
   <li>Paul Irish: <a class="external external-icon"
       href="http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision">requestAnimationFrame
       API: now with sub-millisecond precision</a></li>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
 </ul>

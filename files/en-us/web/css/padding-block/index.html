@@ -5,24 +5,11 @@ tags:
   - CSS
   - padding-block
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.padding-block
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>padding-block</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.</p>
-
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
-padding-block: 10px 20px;  /* An absolute length */
-padding-block: 1em 2em;   /* relative to the text size */
-padding-block: 10px; /* sets both start and end values */
-
-/* &lt;percentage&gt; values */
-padding-block: 5% 2%; /* relative to the nearest block container's width */
-
-/* Global values */
-padding-block: inherit;
-padding-block: initial;
-padding-block: unset;
-</pre>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
@@ -34,6 +21,23 @@ padding-block: unset;
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+padding-block: 10px 20px;  /* An absolute length */
+padding-block: 1em 2em;   /* relative to the text size */
+padding-block: 10px; /* sets both start and end values */
+
+/* &lt;percentage&gt; values */
+padding-block: 5% 2%; /* relative to the nearest block container's width */
+
+/* Global values */
+padding-block: inherit;
+padding-block: initial;
+padding-block: revert;
+padding-block: unset;
+</pre>
+
+<p>The <code>padding-block</code> property may be specified with one or two values. If one value is given, it is used as the value for both {{cssxref("padding-block-start")}} and {{cssxref("padding-block-end")}}. If two values are given, the first is used for {{cssxref("padding-block-start")}} and the second for {{cssxref("padding-block-end")}}.</p>
 
 <h3 id="Values">Values</h3>
 
@@ -49,7 +53,7 @@ padding-block: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -57,14 +61,14 @@ padding-block: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -82,26 +86,11 @@ padding-block: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-padding-block", "padding-block")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.padding-block")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

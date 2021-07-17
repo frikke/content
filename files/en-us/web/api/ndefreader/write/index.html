@@ -5,6 +5,7 @@ tags:
 - NDEF
 - Reference
 - Web NFC
+browser-compat: api.NDEFReader.write
 ---
 <p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
 
@@ -13,14 +14,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>sessionPromise = NDEFReader</em>.write(<em>message</em>, <em>options</em>);
+<pre class="brush: js">var <em>sessionPromise = NDEFReader</em>.write(<em>message</em>, <em>options</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><span style="display: none;"> </span><code>message</code><span
-      style="display: none;"> </span></dt>
+  <dt><code>message</code></dt>
   <dd>The message to be written, either {{DOMxRef("DOMString")}} or
     {{DOMxRef("BufferSource")}} or {{DOMxRef("NDEFMessageInit")}}.</dd>
   <dt><code>options</code> {{optional_inline}}</dt>
@@ -65,25 +65,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td><a href="https://w3c.github.io/web-nfc/#dom-ndefreader-write">Web NFC,
-          write()</a></td>
-      <td>Draft</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.NDEFReader.write")}}</p>
-</div>
+<p>{{Compat}}</p>

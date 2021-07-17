@@ -7,6 +7,7 @@ tags:
   - Manifest
   - Reference
   - WebExtensions
+browser-compat: webextensions.manifest.background
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -38,7 +39,7 @@ tags:
 
 <p>Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled, unless <code>persistent</code> is specified as <code>false</code>. You can use any of the WebExtension APIs in the script, as long as you have requested the necessary <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>.</p>
 
-<p>See the "Background pages" section in <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages">Anatomy of an extension</a> for some more details.</p>
+<p>See the "Background pages" section in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages">Anatomy of an extension</a> for some more details.</p>
 
 <p>The <code>background</code> key is an object that may have one of the following two properties, both optional:</p>
 
@@ -109,6 +110,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.manifest.background", 10)}}</p>
+<p>{{Compat}}</p>

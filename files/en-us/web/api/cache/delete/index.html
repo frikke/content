@@ -2,16 +2,17 @@
 title: Cache.delete()
 slug: Web/API/Cache/delete
 tags:
-- API
-- Cache
-- Experimental
-- Method
-- NeedsContent
-- NeedsExample
-- Reference
-- Service Workers
-- ServiceWorker
-- delete
+  - API
+  - Cache
+  - Experimental
+  - Method
+  - NeedsContent
+  - NeedsExample
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - delete
+browser-compat: api.Cache.delete
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -23,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>cache</em>.delete(<em>request</em>, {<em>options</em>}).then(function(<em>found</em>) {
+<pre class="brush: js"><em>cache</em>.delete(<em>request</em>, {<em>options</em>}).then(function(<em>found</em>) {
   // your cache entry has been deleted if found
 });
 </pre>
@@ -66,7 +67,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">caches.open('v1').then(function(cache) {
+<pre class="brush: js">caches.open('v1').then(function(cache) {
   cache.delete('/images/image.png').then(function(response) {
     someUIUpdateFunction();
   });
@@ -74,27 +75,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#cache-delete', 'Cache: delete')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Cache.delete")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -102,5 +87,5 @@ tags:
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}}</li>
 </ul>

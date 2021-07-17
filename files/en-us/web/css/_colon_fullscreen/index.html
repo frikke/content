@@ -11,14 +11,15 @@ tags:
   - Selector
   - fullscreen
   - screen
+browser-compat: css.selectors.fullscreen
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>:fullscreen</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches every element which is currently in full-screen mode. If multiple elements have been put into full-screen mode, this selects them all.</span></p>
+<p>The <strong><code>:fullscreen</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches every element which is currently in full-screen mode. If multiple elements have been put into full-screen mode, this selects them all.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -32,7 +33,7 @@ tags:
 
 <p>The page's HTML looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;MDN Web Docs Demo: :fullscreen pseudo-class&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;MDN Web Docs Demo: :fullscreen pseudo-class&lt;/h1&gt;
 
 &lt;p&gt;This demo uses the &lt;code&gt;:fullscreen&lt;/code&gt; pseudo-class to automatically
   change the style of a button used to toggle full-screen mode on and off,
@@ -46,42 +47,24 @@ tags:
 
 <p>The magic happens in the CSS. There are two rules here. The first establishes the background color of the "Toggle Full-screen Mode" button when the element is not in a full-screen state. The key is the use of the <code>:not(:fullscreen)</code>, which looks for the element to not have the <code>:fullscreen</code> pseudo-class applied to it.</p>
 
-<pre class="brush: css notranslate">#fs-toggle:not(:fullscreen) {
+<pre class="brush: css">#fs-toggle:not(:fullscreen) {
   background-color: #afa;
 }
 </pre>
 
 <p>When the document <em>is</em> in full-screen mode, the following CSS applies instead, setting the background color to a pale shade of red.</p>
 
-<pre class="brush: css notranslate">#fs-toggle:fullscreen {
+<pre class="brush: css">#fs-toggle:fullscreen {
   background-color: #faa;
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fullscreen', '#:fullscreen-pseudo-class', ':fullscreen')}}</td>
-   <td>{{Spec2('Fullscreen')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.selectors.fullscreen")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
   - Interface
   - Reference
   - Web Audio API
+browser-compat: api.AudioDestinationNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -14,7 +15,7 @@ tags:
 
 <p><code>AudioDestinationNode</code> has no output (as it <em>is</em> the output, no more <code>AudioNode</code> can be linked after it in the audio graph) and one input. The number of channels in the input must be between <code>0</code> and the <code>maxChannelCount</code> value or an exception is raised.</p>
 
-<p>The <code>AudioDestinationNode</code> of a given <code>AudioContext</code> can be retrieved using the {{domxref("AudioContext.destination")}} property.</p>
+<p>The <code>AudioDestinationNode</code> of a given <code>AudioContext</code> can be retrieved using the {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} property.</p>
 
 <table class="properties">
  <tbody>
@@ -58,7 +59,7 @@ tags:
 
 <p>There is no complex set up for using an <code>AudioDestinationNode</code> — by default, this represents the output of the user's system (e.g. their speakers), so you can get it hooked up inside an audio graph using only a few lines of code:</p>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 var source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
 gainNode.connect(audioCtx.destination);</pre>
@@ -67,27 +68,11 @@ gainNode.connect(audioCtx.destination);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#AudioDestinationNode', 'AudioDestinationNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("api.AudioDestinationNode")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

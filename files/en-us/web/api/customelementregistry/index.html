@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Components
   - custom elements
+browser-compat: api.CustomElementRegistry
 ---
 <div>{{DefaultAPISidebar("Web Components")}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <dl>
  <dt>{{domxref("CustomElementRegistry.define()")}}</dt>
- <dd>Defines a new <a href="/en-US/docs/Web/Web_Components/Custom_Elements">custom element</a>.</dd>
+ <dd>Defines a new <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom element</a>.</dd>
  <dt>{{domxref("CustomElementRegistry.get()")}}</dt>
  <dd>Returns the constructor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.</dd>
  <dt>{{domxref("CustomElementRegistry.upgrade()")}}</dt>
@@ -75,21 +76,8 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "custom-elements.html#customelementregistry", "CustomElementRegistry")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CustomElementRegistry")}}</p>
+<p>{{Compat}}</p>

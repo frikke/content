@@ -8,6 +8,7 @@ tags:
 - Property
 - Reference
 - Web Performance
+browser-compat: api.PerformanceEntry.entryType
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
@@ -20,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>type</em> = <em>entry</em>.entryType;</pre>
+  class="brush: js">var <em>type</em> = <em>entry</em>.entryType;</pre>
 
 <h3 id="Return_Value">Return value</h3>
 
@@ -40,6 +41,12 @@ tags:
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><code>element</code></td>
+      <td>{{domxref('PerformanceElementTiming')}}</td>
+      <td>{{domxref("DOMString")}}</td>
+      <td>Reports load time of elements.</td>
+    </tr>
     <tr>
       <td><code>frame</code>, <code>navigation</code></td>
       <td>{{domxref('PerformanceFrameTiming')}},
@@ -112,31 +119,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-entrytype',
-        'entryType')}}</td>
-      <td>{{Spec2('Performance Timeline Level 2')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Performance Timeline', '#dom-performanceentry-entrytype',
-        'entryType')}}</td>
-      <td>{{Spec2('Performance Timeline')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PerformanceEntry.entryType")}}</p>
-</div>
+<p>{{Compat}}</p>

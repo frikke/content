@@ -7,6 +7,7 @@ tags:
   - Reference
   - Response Header
   - header
+browser-compat: http.headers.Cross-Origin-Opener-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -31,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Cross-Origin-Opener-Policy: unsafe-none | same-origin-allow-popups | same-origin
+<pre class="brush: html">Cross-Origin-Opener-Policy: unsafe-none | same-origin-allow-popups | same-origin
 </pre>
 
 <h3 id="Directives">Directives</h3>
@@ -51,7 +52,7 @@ tags:
 
 <p>Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value <code>same-origin</code> value set.</p>
 
-<pre class="notranslate">Cross-Origin-Opener-Policy: same-origin
+<pre>Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 </pre>
 
@@ -59,7 +60,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 <p>To check if cross-origin isolation has been successful, you can test against the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">crossOriginIsolated</a></code> property available to window and worker contexts:</p>
 
-<pre class="brush: js notranslate">if (crossOriginIsolated) {
+<pre class="brush: js">if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
@@ -67,22 +68,11 @@ Cross-Origin-Embedder-Policy: require-corp
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-cross-origin-opener-policy-header', 'Cross-Origin-Opener-Policy header')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Cross-Origin-Opener-Policy")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

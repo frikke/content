@@ -8,11 +8,12 @@ tags:
 - HTML DOM
 - Property
 - Reference
+browser-compat: api.GlobalEventHandlers.onclick
 ---
 <p>{{ ApiRef("HTML DOM") }}</p>
 
 <p>The <code><strong>onclick</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
   processing {{domxref("Element/click_event", "click")}} events on a given element.</p>
 
 <p>The <code>click</code> event is raised when the user clicks on an element. It fires
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>target</var>.onclick = <var>functionRef</var>;
+<pre class="brush: js"><var>target</var>.onclick = <var>functionRef</var>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -50,11 +51,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;div id="demo"&gt;Click here&lt;/div&gt;</pre>
+<pre class="brush:html">&lt;div id="demo"&gt;Click here&lt;/div&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">document.getElementById('demo').onclick = function changeContent() {
+<pre class="brush: js">document.getElementById('demo').onclick = function changeContent() {
 
    document.getElementById('demo').textContent = "Help me";
    document.getElementById('demo').style = "Color: red";
@@ -72,12 +73,12 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush:html notranslate">&lt;p&gt;Click anywhere in this example.&lt;/p&gt;
+<pre class="brush:html">&lt;p&gt;Click anywhere in this example.&lt;/p&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">let log = document.getElementById('log');
+<pre class="brush: js">let log = document.getElementById('log');
 
 document.onclick = inputChange;
 
@@ -91,29 +92,11 @@ function inputChange(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.GlobalEventHandlers.onclick")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

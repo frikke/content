@@ -13,7 +13,7 @@ tags:
 
 <p>When learning the web, it's important to rely on active learning content. Such content is made to help with learning something pro-actively. It can be exercises, live hackable examples, tasks to perform, assessments, etc. In short, anything that can help someone to actively understand something.</p>
 
-<p>There is no straightforward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: <a href="https://jsfiddle.net/" rel="external">JSFiddle</a>, <a href="https://codepen.io/">CodePen</a>, <a href="http://dabblet.com/">Dabblet</a>, etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use <a href="https://thimble.mozilla.org" rel="external">Thimble</a> from the WebMaker project.</p>
+<p>There is no straightforward way to create such content. For example many third party tools exist that can help you create live hackable examples (see: <a href="https://jsfiddle.net/" rel="external">JSFiddle</a>, <a href="https://codepen.io/">CodePen</a>, <a href="https://dabblet.com/">Dabblet</a>, etc.) that you can link from MDN articles. If you want to create more advanced comprehensible exercises, you can easily use <a href="https://thimble.mozilla.org" rel="external">Thimble</a> from the WebMaker project.</p>
 
 <p>Currently, MDN does not have an easy tool to author such active content. However, if you are a coder you can use the current MDN features to create custom active learning content.</p>
 
@@ -142,13 +142,13 @@ document.addEventListener('click', function (e) {
 \{{EmbedLiveSample('hidden_code_example', 120, 125)}}
 &lt;/div&gt;</pre>
 
-<p>You can see a more advanced example of such a tweak on <a href="/en-US/docs/Web/API/Canvas_API#JavaScript">the Canvas API page</a>.</p>
+<p>You can see a more advanced example of such a tweak on <a href="/en-US/docs/Web/API/Canvas_API#javascript">the Canvas API page</a>.</p>
 
 <h3 id="Code_from_outside_the_page">Code from outside the page</h3>
 
 <p>The previous example is okay if you want to embed basic active learning content. However, if you want to deal with complex code, it can become a bit awkward to deal with that <code>hidden</code> class wrapper.</p>
 
-<p>So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can use the {{TemplateLink("EmbedDistLiveSample")}} macro instead of the {{TemplateLink("EmbedLiveSample")}} macro.</p>
+<p>So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can still use the {{TemplateLink("EmbedLiveSample")}} macro, but we'll also have to pass it the page from where to extract your code.</p>
 
 <p>Let's how that sample looks when configured as if it were being embedded from a remote origin:</p>
 

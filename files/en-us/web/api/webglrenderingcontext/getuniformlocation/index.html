@@ -12,6 +12,7 @@ tags:
 - WebGL
 - WebGLRenderingContext
 - getUniformLocation
+browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -45,7 +46,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>WebGLUniformLocation</em> = <em>WebGLRenderingContext</em>.getUniformLocation(<em>program</em>, <em>name</em>);
+<pre class="brush: js"><em>WebGLUniformLocation</em> = <em>WebGLRenderingContext</em>.getUniformLocation(<em>program</em>, <em>name</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -132,10 +133,12 @@ gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);</pre>
 
-<div class="callout-box">This code snippet is taken from <a
+<div class="notecard note">
+    <h3>Note</h3>
+    <p>This code snippet is taken from <a
         href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the
         function <code>animateScene()</code></a> in "A basic 2D WebGL animation example."
-    See that article for the full sample and to see the resulting animation in action.
+    See that article for the full sample and to see the resulting animation in action.</p>
 </div>
 
 <p>After setting the current shading program to <code>shaderProgram</code>, this code
@@ -163,35 +166,11 @@ gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <tbody>
-        <tr>
-            <th scope="col">Specification</th>
-            <th scope="col">Status</th>
-            <th scope="col">Comment</th>
-        </tr>
-        <tr>
-            <td>{{SpecName('WebGL', "#5.14.10", "getUniformLocation")}}</td>
-            <td>{{Spec2('WebGL')}}</td>
-            <td>Initial definition.</td>
-        </tr>
-        <tr>
-            <td>{{SpecName('OpenGL ES 2.0', "glGetUniformLocation.xml",
-                "glGetUniformLocation")}}</td>
-            <td>{{Spec2('OpenGL ES 2.0')}}</td>
-            <td>Man page of the OpenGL API.</td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-    If you'd like to contribute to the data, please check out <a
-        href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-    and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.getUniformLocation")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.font-variant
 ---
 <div>{{CSSRef}}</div>
 
@@ -30,12 +31,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">font-variant: small-caps;
+<pre class="brush:css no-line-numbers">font-variant: small-caps;
 font-variant: common-ligatures small-caps;
 
 /* Global values */
 font-variant: inherit;
 font-variant: initial;
+font-variant: revert;
 font-variant: unset;
 </pre>
 
@@ -64,7 +66,7 @@ font-variant: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -72,13 +74,13 @@ font-variant: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p class="normal"&gt;Firefox rocks!&lt;/p&gt;
+<pre class="brush: html">&lt;p class="normal"&gt;Firefox rocks!&lt;/p&gt;
 &lt;p class="small"&gt;Firefox rocks!&lt;/p&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">p.normal {
+<pre class="brush: css">p.normal {
   font-variant: normal;
 }
 p.small {
@@ -92,39 +94,11 @@ p.small {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-variant', 'font-variant')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Made it a shorthand of the new <code>font-variant-*</code> properties.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-variant', 'font-variant')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-variant', 'font-variant')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.properties.font-variant")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,10 +7,11 @@ tags:
 - RTCPeerConnection
 - Reference
 - WebRTC
+browser-compat: api.RTCPeerConnection.getStreamById
 ---
 <p>{{APIRef}}{{SeeCompatTable}}</p>
 
-<p>{{obsolete_header()}}</p>
+<p>{{deprecated_header}}</p>
 
 <p>The <code><strong>RTCPeerConnection.getStreamById()</strong></code> method returns the
   <a href="/en-US/docs/Web/API/MediaStream"
@@ -28,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>var <em>mediaStream</em> = <em>pc</em>.getStream(id);
+<pre class="brush: js"><code>var <em>mediaStream</em> = <em>pc</em>.getStream(id);
 </code></pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -72,7 +73,7 @@ RTCPeerConnection.prototype.getStreamById = function(id) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.getStreamById")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

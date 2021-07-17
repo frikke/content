@@ -7,6 +7,7 @@ tags:
   - Progress Events
   - ProgressEvent
   - Reference
+browser-compat: api.ProgressEvent
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
@@ -47,7 +48,7 @@ tags:
 
 <p>The following example adds a <code>ProgressEvent</code> to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.</p>
 
-<pre class="brush: js notranslate">var progressBar = document.getElementById("p"),
+<pre class="brush: js">var progressBar = document.getElementById("p"),
     client = new XMLHttpRequest()
 client.open("GET", "magical-unicorns")
 client.onprogress = function(pe) {
@@ -63,24 +64,11 @@ client.send()</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#interface-progressevent', 'ProgressEvent')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ProgressEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

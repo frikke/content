@@ -20,6 +20,7 @@ tags:
   - XRReferenceSpace
   - matrix
   - transform
+browser-compat: api.XRReferenceSpace
 ---
 <p>{{APIRef("WebXR Device API")}}{{secureContext_header}}</p>
 
@@ -36,7 +37,7 @@ tags:
 <p><em>In addition to the methods inherited from its parent interface, {{domxref("XRSpace")}} (there are none at this time), <code>XRReferenceSpace</code> inherits methods from  {{domxref("EventTarget")}}. <code>XRReferenceSpace</code> also provides the following methods.</em></p>
 
 <dl>
- <dt>{{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}<span style="display: none;"> </span></dt>
+ <dt>{{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}</dt>
  <dd>Creates and returns a new reference space object as the same type as the one on which you call the method (so, either <code>XRReferenceSpace</code> or {{domxref("XRBoundedReferenceSpace")}}). The new reference space can be used to transform a coordinate from the reference space of the object on which the method is called into a different coordinate space. This is useful for positioning objects while rendering, and to perform the needed transforms when changing the viewer's position and/or orientation in 3D space.</dd>
 </dl>
 
@@ -84,28 +85,10 @@ xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);</p
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebXR','#xrreferencespace-interface','XRReferenceSpace')}}</td>
-   <td>{{Spec2('WebXR')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.XRReferenceSpace")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,6 +10,7 @@ tags:
   - Reference
   - ServiceWorker
   - Workers
+browser-compat: api.PeriodicSyncEvent
 ---
 <div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
 
@@ -41,7 +42,7 @@ tags:
 
 <p>The following example shows how to respond to a periodic sync event in the service worker.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('periodicsync', event =&gt; {
+<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
   if (event.tag == 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
@@ -52,24 +53,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Periodic Background Sync','#periodicsync-event','PeriodicSyncEvent')}}</td>
-   <td>{{Spec2('Periodic Background Sync')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PeriodicSyncEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

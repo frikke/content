@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - direction
+browser-compat: api.IDBCursor.direction
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -25,13 +26,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"
-  style="font-size: 14px;">var <em>direction = cursor</em>.direction;</pre>
+<pre class="brush: js" >var <em>direction = cursor</em>.direction;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A string (defined by the <a
-    href="https://dvcs.w3.org/hg/IndexedDB/raw-file/default/Overview.html#idl-def-IDBCursorDirection"><code>IDBCursorDirection</code>
+    href="https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection"><code>IDBCursorDirection</code>
     enum</a>) indicating the direction in which the cursor is traversing the data.
   Possible values are:</p>
 
@@ -75,12 +75,10 @@ tags:
   cursor to iterate through all the records in the object store. Within each iteration we
   log the direction of the cursor, something like this:</p>
 
-<pre class="language-html notranslate"
-  style="padding: 1em 0px 1em 30px; font-size: 14px; color: rgb(77, 78, 83);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr;">prev</code></pre>
+<pre>
+  prev
+</pre>
 
-<div class="line-number"
-  style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;">
-</div>
 
 <div class="note">
   <p><strong>Note</strong>: we can't change the direction of travel of the cursor using
@@ -96,7 +94,7 @@ tags:
     example</a> (<a class="external external-icon"
     href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)</p>
 
-<pre class="brush: js notranslate">function backwards() {
+<pre class="brush: js">function backwards() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readonly');
   const objectStore = transaction.objectStore('rushAlbumList');
@@ -118,32 +116,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbcursor-direction', 'direction')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-direction", "direction")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBCursor.direction")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

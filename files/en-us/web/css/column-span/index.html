@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.column-span
 ---
 <div>{{CSSRef}}</div>
 
@@ -14,13 +15,14 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/column-span.html")}}</div>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 column-span: none;
 column-span: all;
 
 /* Global values */
 column-span: inherit;
 column-span: initial;
+column-span: revert;
 column-span: unset;
 </pre>
 
@@ -45,7 +47,7 @@ column-span: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -55,7 +57,7 @@ column-span: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;article&gt;
+<pre class="brush: html">&lt;article&gt;
   &lt;h2&gt;Header spanning all of the columns&lt;/h2&gt;
   &lt;p&gt;
      The h2 should span all the columns. The rest
@@ -70,7 +72,7 @@ column-span: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush:css notranslate">article {
+<pre class="brush:css">article {
   columns: 3;
 }
 
@@ -85,26 +87,11 @@ h2 {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#column-span', 'column-span')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.column-span")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

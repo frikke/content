@@ -11,6 +11,7 @@ tags:
 - composed
 - scoped
 - shadow dom
+browser-compat: api.Event.composed
 ---
 <p>{{APIRef("Shadow DOM")}}</p>
 
@@ -26,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const isComposed = <var>Event</var>.composed;</pre>
+  class="brush: js">const isComposed = <var>Event</var>.composed;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -89,7 +90,7 @@ tags:
   <code>&lt;closed-shadow&gt;</code> element, you'll notice two things.</p>
 
 <ol>
-  <li>The <code>composed</code> property returns <code>true</code> beause the
+  <li>The <code>composed</code> property returns <code>true</code> because the
     <code>click</code> event is always able to propagate across shadow boundaries.</li>
   <li>You'll notice a difference in the value of <code>composedPath</code> for the two
     elements.</li>
@@ -110,26 +111,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-event-composed', 'composed')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Event.composed")}}</p>
-</div>
+<p>{{Compat}}</p>

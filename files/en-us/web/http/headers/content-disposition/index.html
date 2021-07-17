@@ -3,8 +3,11 @@ title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
 tags:
   - HTTP
+  - HTTP Header
+  - Request header
+  - Response header
   - Reference
-  - header
+browser-compat: http.headers.Content-Disposition
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -18,8 +21,8 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}} (for the main body)<br>
-    {{Glossary("General header")}} (for a subpart of a multipart body)</td>
+   <td>{{Glossary("Response header")}} (for the main body),
+      <br>{{Glossary("Request header")}}, {{Glossary("Response header")}} (for a subpart of a multipart body)</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -34,7 +37,7 @@ tags:
 
 <p>The first parameter in the HTTP context is either <code>inline</code> (default value, indicating it can be displayed inside the Web page, or as the Web page) or <code>attachment</code> (indicating it should be downloaded; most browsers presenting a 'Save as' dialog, prefilled with the value of the <code>filename</code> parameters if present).</p>
 
-<pre class="brush: html notranslate">Content-Disposition: inline
+<pre class="brush: html">Content-Disposition: inline
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"</pre>
 
@@ -46,7 +49,7 @@ Content-Disposition: attachment; filename="filename.jpg"</pre>
 
 <p>A <code>multipart/form-data</code> body requires a <code>Content-Disposition</code> header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always <code>form-data</code>, and the header <em>must</em> also include a <code>name</code> parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the <code>'='</code> sign. Multiple parameters are separated by a semi-colon (<code>';'</code>).</p>
 
-<pre class="brush: html notranslate">Content-Disposition: form-data; name="fieldName"
+<pre class="brush: html">Content-Disposition: form-data; name="fieldName"
 Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
 
 <h3 id="Directives">Directives</h3>
@@ -59,7 +62,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
  <dd>Is followed by a string containing the original name of the file transmitted. The filename is always optional and must not be used blindly by the application: path information should be stripped, and conversion to the server file system rules should be done. This parameter provides mostly indicative information. When used in combination with <code>Content-Disposition: attachment</code>, it is used as the default filename for an eventual "Save As" dialog presented to the user.</dd>
  <dt><code>filename*</code></dt>
  <dd>
- <p>The parameters <code>filename</code> and <code>filename*</code> differ only in that <code>filename*</code> uses the encoding defined in <a href="https://tools.ietf.org/html/rfc5987">RFC 5987</a>. When both <code>filename</code> and <code>filename*</code> are present in a single header field value, <code>filename*</code> is preferred over <code>filename</code> when both are understood.</p>
+ <p>The parameters <code>filename</code> and <code>filename*</code> differ only in that <code>filename*</code> uses the encoding defined in <a href="https://datatracker.ietf.org/doc/html/rfc5987">RFC 5987</a>. When both <code>filename</code> and <code>filename*</code> are present in a single header field value, <code>filename*</code> is preferred over <code>filename</code> when both are understood.</p>
  </dd>
 </dl>
 
@@ -71,7 +74,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
 
 <p>A response triggering the "Save As" dialog:</p>
 
-<pre class="notranslate">200 OK
+<pre>200 OK
 Content-Type: text/html; charset=utf-8
 Content-Disposition: attachment; filename="cool.html"
 Content-Length: 21
@@ -84,7 +87,7 @@ Content-Length: 21
 
 <p>An example of an HTML form posted using the <code>multipart/form-data</code> format that makes use of the <code>Content-Disposition</code> header:</p>
 
-<pre class="notranslate">POST /test.html HTTP/1.1
+<pre>POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
 
@@ -100,30 +103,11 @@ value2
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7578")}}</td>
-   <td>Returning Values from Forms: multipart/form-data</td>
-  </tr>
-  <tr>
-   <td>{{RFC("6266")}}</td>
-   <td>Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)</td>
-  </tr>
-  <tr>
-   <td>{{RFC("2183")}}</td>
-   <td>Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Content-Disposition")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Compatibility_notes">Compatibility notes</h2>
 
@@ -135,7 +119,7 @@ value2
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms">HTML Forms</a></li>
  <li>The {{HTTPHeader("Content-Type")}} defining the boundary of the multipart body.</li>
  <li>The {{domxref("FormData")}} interface used to manipulate form data for use in the {{domxref("XMLHttpRequest")}} API.</li>
 </ul>

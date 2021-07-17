@@ -2,14 +2,15 @@
 title: Cache.keys()
 slug: Web/API/Cache/keys
 tags:
-- API
-- Cache
-- Experimental
-- Method
-- Reference
-- Service Workers
-- ServiceWorker
-- keys
+  - API
+  - Cache
+  - Experimental
+  - Method
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - keys
+browser-compat: api.Cache.keys
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>cache</em>.keys(<em>request</em>, {<em>options</em>}).then(function(<em>keys</em>) {
+<pre class="brush: js"><em>cache</em>.keys(<em>request</em>, {<em>options</em>}).then(function(<em>keys</em>) {
   // do something with your array of requests
 });
 </pre>
@@ -68,7 +69,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">caches.open('v1').then(function(cache) {
+<pre class="brush: js">caches.open('v1').then(function(cache) {
   cache.keys().then(function(keys) {
     keys.forEach(function(request, index, array) {
       cache.delete(request);
@@ -78,27 +79,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#cache-keys', 'Cache: keys')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Cache.keys")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -106,5 +91,5 @@ tags:
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}}</li>
 </ul>

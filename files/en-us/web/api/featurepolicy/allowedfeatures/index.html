@@ -8,6 +8,7 @@ tags:
 - Feature-Policy
 - FeaturePolicy
 - Reference
+browser-compat: api.FeaturePolicy.allowedFeatures
 ---
 <p>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</p>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const allowed = <em>FeaturePolicy</em>.allowedFeatures()
+<pre class="brush: js">const allowed = <em>FeaturePolicy</em>.allowedFeatures()
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -34,9 +35,9 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The followin example logs all the allowed directives for the current document. Please
+<p>The following example logs all the allowed directives for the current document. Please
   note that these features might be restricted by the Permissions API, if the user did not
-  grant the corrsponding permission yet.</p>
+  grant the corresponding permission yet.</p>
 
 <pre class="brush: js">// First, get the Feature Policy object
 const featurePolicy = document.featurePolicy
@@ -51,21 +52,8 @@ for (const directive of allowed){
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("Feature Policy","","allowsFeature")}}</td>
-      <td>{{Spec2("Feature Policy")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FeaturePolicy.allowedFeatures")}}</p>
+<p>{{Compat}}</p>

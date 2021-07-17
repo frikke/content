@@ -8,26 +8,27 @@ tags:
   - NeedsContent
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.flex-shrink
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>flex-shrink</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to <code>flex-shrink</code>.</span></p>
+<p>The <strong><code>flex-shrink</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the flex shrink factor of a flex item. If the size of all flex items is larger than the flex container, items shrink to fit according to <code>flex-shrink</code>.</p>
 
 <p>In use, <code>flex-shrink</code> is used alongside the other flex properties {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}}, and normally defined using the {{cssxref("flex")}} shorthand.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;number&gt; values */
+<pre class="brush:css no-line-numbers">/* &lt;number&gt; values */
 flex-shrink: 2;
 flex-shrink: 0.6;
 
 /* Global values */
 flex-shrink: inherit;
 flex-shrink: initial;
+flex-shrink: revert;
 flex-shrink: unset;
 </pre>
 
@@ -46,7 +47,7 @@ flex-shrink: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -55,7 +56,7 @@ flex-shrink: unset;
 <h4 id="HTML">HTML</h4>
 
 <div id="Live_Sample">
-<pre class="brush: html notranslate">&lt;p&gt;The width of content is 500px; the flex-basis of the flex items is 120px.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;The width of content is 500px; the flex-basis of the flex items is 120px.&lt;/p&gt;
 &lt;p&gt;A, B, C have flex-shrink:1 set. D and E have flex-shrink:2 set&lt;/p&gt;
 &lt;p&gt;The width of D and E is less than the others.&lt;/p&gt;
 &lt;div id="content"&gt;
@@ -69,7 +70,7 @@ flex-shrink: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#content {
+<pre class="brush: css">#content {
   display: flex;
   width: 500px;
 }
@@ -95,28 +96,11 @@ flex-shrink: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-shrink-property', 'flex-shrink')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("css.properties.flex-shrink")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

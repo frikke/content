@@ -28,7 +28,7 @@ tags:
   information such as the response body and the <a href="/en-US/docs/Web/HTTP/Status">HTTP
     status</a> of the result.</p>
 
-<pre class="brush: js notranslate">function reqListener () {
+<pre class="brush: js">function reqListener () {
   console.log(this.responseText);
 }
 
@@ -54,10 +54,12 @@ oReq.send();</pre>
   }}, synchronous requests on the main thread have been deprecated due to the negative
   effects to the user experience.</div>
 
-<div class="note"><strong>Note:</strong> The constructor function
+<div class="notecard note">
+  <p><strong>Note:</strong> The constructor function
   <code>XMLHttpRequest</code> isn't limited to only XML documents. It starts with
   <strong>"XML"</strong> because when it was created the main format that was originally
-  used for Asynchronous Data Exchange were XML</div>
+  used for Asynchronous Data Exchange was XML.</p>
+</div>
 
 <h2 id="Handling_responses">Handling responses</h2>
 
@@ -89,7 +91,7 @@ oReq.send();</pre>
     XML code changes slightly, the method will likely fail.</li>
 </ol>
 
-<div class="note">
+<div class="notecard note">
   <p><strong>Note:</strong> <code>XMLHttpRequest</code> can now interpret HTML for you
     using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the
     article about <a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML
@@ -126,7 +128,7 @@ oReq.send();</pre>
   "overrideMimeType()")}} method on the <code>XMLHttpRequest</code> object and is a
   workable solution.</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 oReq.open("GET", url);
 // retrieve data unprocessed as a binary string
 oReq.overrideMimeType("text/plain; charset=x-user-defined");
@@ -142,7 +144,7 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
   "<code>arraybuffer</code>" to fetch the remote content into a {{jsxref("ArrayBuffer")}}
   object, which stores the raw binary data.</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.onload = function(e) {
   var arraybuffer = oReq.response; // not responseText
@@ -175,7 +177,7 @@ oReq.send();</pre>
   <dd>The transfer is complete; all data is now in the <code>response</code></dd>
 </dl>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.addEventListener("progress", updateProgress);
 oReq.addEventListener("load", transferComplete);
@@ -226,7 +228,7 @@ function transferCanceled(evt) {
   The upload events are fired on the <code>XMLHttpRequest.upload</code> object, as shown
   below:</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.upload.addEventListener("progress", updateProgress);
 oReq.upload.addEventListener("load", transferComplete);
@@ -257,7 +259,7 @@ oReq.open();
 <p>One can also detect all three load-ending conditions (<code>abort</code>,
   <code>load</code>, or <code>error</code>) using the <code>loadend</code> event:</p>
 
-<pre class="brush:js notranslate">req.addEventListener("loadend", loadEnd);
+<pre class="brush:js">req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
   console.log("The transfer finished (although we don't know if it succeeded or not).");
@@ -317,14 +319,14 @@ function loadEnd(e) {
     <p>Method: <code>POST</code>; Encoding type:
       <code>application/x-www-form-urlencoded</code> (default):</p>
 
-    <pre class="brush:plain notranslate">Content-Type: application/x-www-form-urlencoded
+    <pre class="brush:plain">Content-Type: application/x-www-form-urlencoded
 
 foo=bar&amp;baz=The+first+line.%0D%0AThe+second+line.%0D%0A</pre>
   </li>
   <li>
     <p>Method: <code>POST</code>; Encoding type: <code>text/plain</code>:</p>
 
-    <pre class="brush:plain notranslate">Content-Type: text/plain
+    <pre class="brush:plain">Content-Type: text/plain
 
 foo=bar
 baz=The first line.
@@ -335,7 +337,7 @@ The second line.</pre>
       <code><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">multipart/form-data</a></code>:
     </p>
 
-    <pre class="brush:plain notranslate">Content-Type: multipart/form-data; boundary=---------------------------314911788813839
+    <pre class="brush:plain">Content-Type: multipart/form-data; boundary=---------------------------314911788813839
 
 -----------------------------314911788813839
 Content-Disposition: form-data; name="foo"
@@ -355,7 +357,7 @@ The second line.
   be added to the URL:</p>
 
 <pre
-  class="brush:plain notranslate">?foo=bar&amp;baz=The%20first%20line.%0AThe%20second%20line.</pre>
+  class="brush:plain">?foo=bar&amp;baz=The%20first%20line.%0AThe%20second%20line.</pre>
 
 <h4 id="A_little_vanilla_framework">A little vanilla framework</h4>
 
@@ -366,8 +368,8 @@ The second line.
   here we place <strong>a complete (yet didactic) framework</strong>, able to use all four
   ways to <em>submit</em>, and to <strong>upload files</strong>:</p>
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-  <pre class="brush: html notranslate">&lt;!doctype html&gt;
+
+  <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
@@ -624,13 +626,12 @@ var AJAXSubmit = (function () {
 
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
 <p>To test this, create a page named <strong>register.php</strong> (which is the
   <code>action</code> attribute of these sample forms), and put the following
   <em>minimalistic</em> content:</p>
 
-<pre class="brush: php notranslate">&lt;?php
+<pre class="brush: php">&lt;?php
 /* register.php */
 
 header("Content-type: text/plain");
@@ -657,7 +658,7 @@ print_r($_FILES);
 
 <p>The syntax to activate this script is:</p>
 
-<pre class="brush: js notranslate">AJAXSubmit(myForm);</pre>
+<pre class="brush: js">AJAXSubmit(myForm);</pre>
 
 <div class="note"><strong>Note:</strong> This framework uses the {{domxref("FileReader")}}
   API to transmit file uploads. This is a recent API and is not implemented in IE9 or
@@ -696,8 +697,7 @@ print_r($_FILES);
       href="#A_little_vanilla_framework">the previous example</a> transformed to use the
     <code>FormData</code> API</strong>. Note the brevity of the code:</p>
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-  <pre class="brush: html notranslate">&lt;!doctype html&gt;
+  <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta http-equiv="Content-Type" charset="UTF-8" /&gt;
@@ -818,7 +818,7 @@ function AJAXSubmit (oFormElement) {
 &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
+
 
 <div class="note"><strong>Note:</strong> As we said,<strong> {{domxref("FormData")}}
     objects are not <a
@@ -832,7 +832,7 @@ function AJAXSubmit (oFormElement) {
 
 <h2 id="Get_last_modified_date">Get last modified date</h2>
 
-<pre class="brush: js notranslate">function getHeaderTime () {
+<pre class="brush: js">function getHeaderTime () {
   console.log(this.getResponseHeader("Last-Modified"));  /* A valid GMTString date or null */
 }
 
@@ -846,7 +846,7 @@ oReq.send();</pre>
 
 <p>Let's create two functions:</p>
 
-<pre class="brush: js notranslate">function getHeaderTime () {
+<pre class="brush: js">function getHeaderTime () {
   var nLastVisit = parseFloat(window.localStorage.getItem('lm_' + this.filepath));
   var nLastModif = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -867,7 +867,7 @@ function ifHasChanged(sURL, fCallback) {
 
 <p>And to test:</p>
 
-<pre class="brush: js notranslate">/* Let's test the file "yourpage.html"... */
+<pre class="brush: js">/* Let's test the file "yourpage.html"... */
 
 ifHasChanged("yourpage.html", function (nModif, nVisit) {
   console.log("The page '" + this.filepath + "' has been changed on " + (new Date(nModif)).toLocaleString() + "!");
@@ -889,7 +889,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 <p>A cross-browser compatible approach to bypassing the cache is appending a timestamp to
   the URL, being sure to include a "?" or "&amp;" as appropriate. For example:</p>
 
-<pre class="brush:plain notranslate">http://foo.com/bar.html -&gt; http://foo.com/bar.html?12345
+<pre class="brush:plain">http://foo.com/bar.html -&gt; http://foo.com/bar.html?12345
 http://foo.com/bar.html?foobar=baz -&gt; http://foo.com/bar.html?foobar=baz&amp;12345
 </pre>
 
@@ -898,7 +898,7 @@ http://foo.com/bar.html?foobar=baz -&gt; http://foo.com/bar.html?foobar=baz&amp;
 
 <p>You can automatically adjust URLs using the following code:</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.open("GET", url + ((/\?/).test(url) ? "&amp;" : "?") + (new Date()).getTime());
 oReq.send(null);</pre>
@@ -932,7 +932,7 @@ oReq.send(null);</pre>
   is subsequently <code>open()</code>. This case can happen, for example, when one has an
   XMLHttpRequest that gets fired on an onunload event for a window, the expected
   XMLHttpRequest is created when the window to be closed is still there, and finally
-  sending the request (in otherwords, <code>open()</code>) when this window has lost its
+  sending the request (in other words, <code>open()</code>) when this window has lost its
   focus and another window gains focus. The most effective way to avoid this problem is to
   set a listener on the new window's {{event("activate")}} event which is set once the
   terminated window has its {{event("unload")}} event triggered.</p>
@@ -944,29 +944,9 @@ oReq.send(null);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('XMLHttpRequest')}}</td>
-      <td>{{Spec2('XMLHttpRequest')}}</td>
-      <td>Live standard, latest version</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications("api.XMLHttpRequest")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
 <p>{{Compat("api.XMLHttpRequest")}}</p>
 

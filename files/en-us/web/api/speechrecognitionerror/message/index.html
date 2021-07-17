@@ -11,8 +11,9 @@ tags:
 - message
 - recognition
 - speech
+browser-compat: api.SpeechRecognitionError.message
 ---
-<div>{{APIRef("Web Speech API")}}{{obsolete_header}}</div>
+<div>{{APIRef("Web Speech API")}}{{deprecated_header}}</div>
 
 <p>The <code><strong>message</strong></code> read-only property of the
   {{domxref("SpeechRecognitionError")}} interface returns a message describing the error
@@ -25,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var myErrorMsg = event.message;
+<pre class="brush: js">var myErrorMsg = event.message;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -45,7 +46,7 @@ recognition.onerror = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechRecognitionError.message")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
 

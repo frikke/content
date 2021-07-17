@@ -8,6 +8,7 @@ tags:
   - Reference
   - WebGL
   - WebGL extension
+browser-compat: api.ANGLE_instanced_arrays.drawElementsInstancedANGLE
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -19,14 +20,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <var>ext</var>.drawElementsInstancedANGLE(<var>mode</var>, <var>count</var>, <var>type</var>, <var>offset</var>, <var>primcount</var>);
+<pre class="brush: js">void <var>ext</var>.drawElementsInstancedANGLE(<var>mode</var>, <var>count</var>, <var>type</var>, <var>offset</var>, <var>primcount</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code>mode</code></dt>
- <dd>A {{domxref("GLenum")}} specifying the type primitive to render. Possible values are:
+ <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values are:
  <ul>
   <li><code>gl.POINTS</code>: Draws a single dot.</li>
   <li><code>gl.LINE_STRIP</code>: Draws a straight line to the next vertex.</li>
@@ -38,9 +39,9 @@ tags:
  </ul>
  </dd>
  <dt>count</dt>
- <dd>A {{domxref("GLsizei")}} specifying the number of elements to be rendered.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.</dd>
  <dt>type</dt>
- <dd>A {{domxref("GLenum")}} specifying the type of the values in the element array buffer. Possible values are:
+ <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array buffer. Possible values are:
  <ul>
   <li><code>gl.UNSIGNED_BYTE</code></li>
   <li><code>gl.UNSIGNED_SHORT</code></li>
@@ -52,9 +53,9 @@ tags:
  </ul>
  </dd>
  <dt>offset</dt>
- <dd>A {{domxref("GLintptr")}} specifying an offset in the element array buffer. Must be a valid multiple of the size of the given <code>type</code>.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in the element array buffer. Must be a valid multiple of the size of the given <code>type</code>.</dd>
  <dt>primcount</dt>
- <dd>A {{domxref("GLsizei")}} specifying the number of instances of the set of elements to execute.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the set of elements to execute.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -77,26 +78,11 @@ ext.drawElementsInstancedANGLE(gl.POINTS, 2, gl.UNSIGNED_SHORT, 0, 4);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ANGLE_instanced_arrays', '', 'ANGLE_instanced_arrays')}}</td>
-   <td>{{Spec2('ANGLE_instanced_arrays')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("api.ANGLE_instanced_arrays.drawElementsInstancedANGLE")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

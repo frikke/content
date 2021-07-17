@@ -9,6 +9,7 @@ tags:
   - Reference
   - WebExtensions
   - setPage
+browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setPage
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -38,20 +39,18 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>Create a new pane, and populate it with an HTML page. You could run this code in a script loaded by your extension's <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
+<p>Create a new pane, and populate it with an HTML page. You could run this code in a script loaded by your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
 
-<pre class="notranslate brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onCreated</span><span class="punctuation token">(</span>sidebarPane<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  sidebarPane<span class="punctuation token">.</span><span class="function token">setPage</span><span class="punctuation token">('sidebar/sidebar.html'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-</code></pre>
+<pre class="brush: js line-numbers  language-js">function onCreated(sidebarPane) {
+  sidebarPane.setPage('sidebar/sidebar.html');
+}
+</pre>
 
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setPage", 10)}}</p>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p>{{Compat}}</p>
 
 <div class="note"><strong>Acknowledgements</strong>
 
@@ -87,4 +86,3 @@ tags:
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
 </div>
-
