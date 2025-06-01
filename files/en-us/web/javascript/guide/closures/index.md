@@ -205,7 +205,7 @@ The shared lexical environment is created in the body of an anonymous function, 
 Those three public functions form closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
 
 ```js
-const makeCounter = function () {
+function makeCounter() {
   let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -223,7 +223,7 @@ const makeCounter = function () {
       return privateCounter;
     },
   };
-};
+}
 
 const counter1 = makeCounter();
 const counter2 = makeCounter();
@@ -485,7 +485,7 @@ setupHelp();
 
 This example uses `const` instead of `var`, so every closure binds the block-scoped variable, meaning that no additional closures are required.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input), as shown:
+Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input), as shown:
 
 ```js
 function showHelp(help) {

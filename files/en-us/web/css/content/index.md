@@ -89,7 +89,7 @@ content: unset;
 
 The value can be:
 
-- One of two keywords — `none` or `normal`.
+- One of two keywords: `none` or `normal`. `normal` is the default property value.
 - `<content-replacement>` when replacing a DOM node. `<content-replacement>` is always an `<image>`.
 - A `<content-list>` when replacing pseudo-elements and margin boxes. A `<content-list>` is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
 - An optional alternative text value of a `<string>` or `<counter>`, preceded by a slash (`/`).
@@ -103,7 +103,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - `normal`
 
-  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to the element's descendants.
+  - : For the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements, this value computes to `none` . For other pseudo-elements such as {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}, it produces the element's initial (or normal) content. For regular elements or page margin boxes, it computes to the element's descendants. This is the default value.
 
 - {{cssxref("&lt;string&gt;")}}
 
@@ -266,8 +266,8 @@ This example combines a counter sandwiched between two `<string>`s prepended to 
       <li>Ducks</li>
       <li>Flightless</li>
     </ol>
-  <li>Marsupials</li>
   </li>
+  <li>Marsupials</li>
 </ol>
 ```
 
@@ -461,6 +461,9 @@ div {
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref(":target-current")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}

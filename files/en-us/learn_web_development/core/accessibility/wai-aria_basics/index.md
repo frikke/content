@@ -3,9 +3,8 @@ title: WAI-ARIA basics
 short-title: WAI-ARIA
 slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
@@ -271,7 +270,7 @@ footer {
 }
 
 nav {
-  background-color: ff80ff;
+  background-color: #ff80ff;
   display: flex;
   gap: 2vw;
   @media (width <= 650px) {
@@ -524,7 +523,7 @@ footer {
 }
 
 nav {
-  background-color: ff80ff;
+  background-color: #ff80ff;
   display: flex;
   gap: 2vw;
   @media (width <= 650px) {
@@ -1089,8 +1088,7 @@ class TabsManual {
     this.tabs = Array.from(this.tablistNode.querySelectorAll("[role=tab]"));
     this.tabpanels = [];
 
-    for (let i = 0; i < this.tabs.length; i += 1) {
-      const tab = this.tabs[i];
+    for (const tab of this.tabs) {
       const tabpanel = document.getElementById(
         tab.getAttribute("aria-controls"),
       );
@@ -1102,9 +1100,7 @@ class TabsManual {
       tab.addEventListener("keydown", this.onKeydown.bind(this));
       tab.addEventListener("click", this.onClick.bind(this));
 
-      if (!this.firstTab) {
-        this.firstTab = tab;
-      }
+      this.firstTab ??= tab;
       this.lastTab = tab;
     }
 
@@ -1112,8 +1108,7 @@ class TabsManual {
   }
 
   setSelectedTab(currentTab) {
-    for (let i = 0; i < this.tabs.length; i += 1) {
-      const tab = this.tabs[i];
+    for (const tab of this.tabs.length) {
       if (currentTab === tab) {
         tab.setAttribute("aria-selected", "true");
         tab.removeAttribute("tabindex");
@@ -1198,10 +1193,10 @@ class TabsManual {
 
 // Initialize tablist
 
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   const tablists = document.querySelectorAll("[role=tablist].manual");
-  for (let i = 0; i < tablists.length; i++) {
-    new TabsManual(tablists[i]);
+  for (const tablist of tablists) {
+    new TabsManual(tablist);
   }
 });
 ```
@@ -1229,7 +1224,7 @@ In our tests, this new structure did serve to improve things overall. The `<butt
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA).
 
 ## Summary
 

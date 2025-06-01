@@ -46,9 +46,12 @@ The `arguments` object is useful for functions called with more arguments than t
 ```js
 function longestString() {
   let longest = "";
-  for (let i = 0; i < arguments.length; i++) {
-    if (arguments[i].length > longest.length) {
-      longest = arguments[i];
+  if (arguments.length === 0) {
+    throw new TypeError("At least one string is required");
+  }
+  for (const arg of arguments) {
+    if (arg.length > longest.length) {
+      longest = arg;
     }
   }
   return longest;
@@ -170,7 +173,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 ### Defining a function that creates HTML lists
 
-This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Element/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Element/ol). The function is defined as follows:
+This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is `"u"` if the list is to be [unordered (bulleted)](/en-US/docs/Web/HTML/Reference/Elements/ul), or `"o"` if the list is to be [ordered (numbered)](/en-US/docs/Web/HTML/Reference/Elements/ol). The function is defined as follows:
 
 ```js
 function list(type) {

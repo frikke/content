@@ -3,9 +3,10 @@ title: Introduction to automated testing
 short-title: Automated testing
 slug: Learn_web_development/Extensions/Testing/Automated_testing
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
 
 Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as Sauce Labs, BrowserStack, and TestingBot.
 
@@ -700,7 +701,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
      api_secret: "your-tb-secret",
    });
 
-   tb.getTests(function (err, tests) {
+   tb.getTests((err, tests) => {
      console.log(tests);
    });
    ```
