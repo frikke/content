@@ -2,9 +2,8 @@
 title: "Apache Configuration: .htaccess"
 slug: Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
@@ -79,7 +78,7 @@ One alternative is to explicitly state what domains have access to the content o
 
 ### Cross-origin images
 
-As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
+As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
 
 To mitigate the possibility of these attacks, you should use the `crossorigin` attribute in the images you request and the code snippet below in your `.htaccess` to set the CORS header from the server.
 
@@ -106,9 +105,9 @@ Google Chrome's [Google Fonts troubleshooting guide](https://developers.google.c
 
 ### Cross-origin resource timing
 
-The [Resource Timing Level 1](https://www.w3.org/TR/resource-timing/) specification defines an interface for web applications to access the complete timing information for resources in a document.
+The [Resource Timing](https://w3c.github.io/resource-timing/) specification defines an interface for web applications to access the complete timing information for resources in a document.
 
-The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
+The [`Timing-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
 If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin after making the request, some attributes of the `PerformanceResourceTiming` object will be set to zero.
 
