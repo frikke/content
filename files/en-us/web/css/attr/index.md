@@ -132,11 +132,12 @@ The `attr()` function can reference attributes that were never intended by the p
 ```html
 <!-- This won't work! -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
-<style>
-  span[data-icon] {
-    background-image: url(attr(data-icon));
-  }
-</style>
+```
+
+```css
+span[data-icon] {
+  background-image: url(attr(data-icon));
+}
 ```
 
 Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
@@ -223,7 +224,7 @@ if (!CSS.supports("x: attr(x type(*))")) {
 
 ### content property
 
-In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the contents of the {{HTMLElement("p")}} element.
+In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) to the contents of the {{HTMLElement("p")}} element.
 
 #### HTML
 
@@ -247,7 +248,7 @@ In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/W
 
 {{SeeCompatTable}}
 
-In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
+In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
 
 #### HTML
 
@@ -273,7 +274,7 @@ p::after {
 
 {{SeeCompatTable}}
 
-In this example, we set the CSS value of {{CSSXRef("background-color")}} to the value of the `data-background` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) assigned to the {{HTMLElement("div")}} element.
+In this example, we set the CSS value of {{CSSXRef("background-color")}} to the value of the `data-background` [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) assigned to the {{HTMLElement("div")}} element.
 
 #### HTML
 
@@ -503,5 +504,5 @@ document.querySelector("button").addEventListener("click", (e) => {
 ## See also
 
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
-- [HTML `data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*)
+- [HTML `data-*` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
 - [SVG `data-*` attributes](/en-US/docs/Web/SVG/Reference/Attribute/data-*)

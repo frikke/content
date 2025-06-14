@@ -1,5 +1,6 @@
 ---
-title: "Permissions-Policy: deferred-fetch"
+title: "Permissions-Policy: deferred-fetch directive"
+short-title: deferred-fetch
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch
 page-type: http-permissions-policy-directive
 status:
@@ -9,9 +10,9 @@ browser-compat: http.headers.Permissions-Policy.deferred-fetch
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The `deferred-fetch` and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} {{HTTPHeader("Permissions-Policy")}} directives are part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
+The **`deferred-fetch`** {{HTTPHeader("Permissions-Policy")}} directive is part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
 
-They determine how the overall 640KiB quota limit is distributed between the top-level origin and its cross-origin subframes. By default, the top-level origin is granted 512KiB, and each cross-origin subframe is granted 8KiB out of the rest of the 128KiB. The `deferred-fetch` Permissions Policy can allow sub-frame origins to be granted a larger 64KiB quota out of the top-level 512KiB quota in place of the 8KiB minimal quota they would otherwise receive by default.
+This directive, along with {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}, determines how the overall 640KiB quota limit is distributed between the top-level origin and its cross-origin subframes. By default, the top-level origin is granted 512KiB, and each cross-origin subframe is granted 8KiB out of the rest of the 128KiB. The `deferred-fetch` Permissions Policy can allow sub-frame origins to be granted a larger 64KiB quota out of the top-level 512KiB quota in place of the 8KiB minimal quota they would otherwise receive by default.
 
 See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details and examples.
 
@@ -19,11 +20,11 @@ See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas
 
 ```http
 Permissions-policy: deferred-fetch=(self)
-Permissions-policy: deferred-fetch=(self <urllist>)
-Permissions-policy: deferred-fetch=(<urllist>)
+Permissions-policy: deferred-fetch=(self <url-list>)
+Permissions-policy: deferred-fetch=(<url-list>)
 ```
 
-- `<urllist>`
+- `<url-list>`
   - : A space-separated list of origins (each of which is given in quotation marks) which are granted a higher quota of 64KiB taken from the parent's main quota. The 64KiB quota is taken at the time the subframe is created.
 
 A cross-origin subframe can grant `deferred-fetch` to one of its cross-origin subframe descendants, delegating its entire quota. This only works if none of the quota is currently being used.
