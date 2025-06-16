@@ -1,5 +1,6 @@
 ---
 title: "ARIA: checkbox role"
+short-title: checkbox
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 page-type: aria-role
 sidebar: accessibilitysidebar
@@ -17,7 +18,7 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 ```
 
 > [!NOTE]
-> The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox of `<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
+> The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox of `<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
 
 ```html
 <input type="checkbox" id="chk1-label" name="RememberPreferences" />
@@ -26,9 +27,9 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 
 ## Description
 
-The native HTML checkbox ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)) form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"` can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
+The native HTML checkbox ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)) form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"` can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
 
-Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
+Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
 
 The developer is required to change the value of the `aria-checked` attribute dynamically when the checkbox is activated.
 
@@ -97,16 +98,9 @@ The following example creates an otherwise non-semantic checkbox element using C
   role="checkbox"
   id="chkPref"
   aria-checked="false"
-  onclick="changeCheckbox()"
-  onKeyDown="changeCheckbox(event.code)"
   tabindex="0"
   aria-labelledby="chk1-label"></span>
-<label
-  id="chk1-label"
-  onclick="changeCheckbox()"
-  onKeyDown="changeCheckbox(event.code)"
-  >Remember my preferences</label
->
+<label id="chk1-label">Remember my preferences</label>
 ```
 
 ### CSS
@@ -132,18 +126,32 @@ The following example creates an otherwise non-semantic checkbox element using C
 ### JavaScript
 
 ```js
+const item = document.getElementById("chkPref");
+const label = document.getElementById("chk1-label");
+
 function changeCheckbox(code) {
-  const item = document.getElementById("chkPref");
   const checked = item.getAttribute("aria-checked");
 
   if (code && code !== "Space") {
     return;
-  } else if (checked === "true") {
+  }
+  if (checked === "true") {
     item.setAttribute("aria-checked", "false");
   } else {
     item.setAttribute("aria-checked", "true");
   }
 }
+
+item.addEventListener("keydown", (event) => {
+  changeCheckbox(event.code);
+});
+
+label.addEventListener("keydown", (event) => {
+  changeCheckbox(event.code);
+});
+
+item.addEventListener("click", changeCheckbox);
+label.addEventListener("click", changeCheckbox);
 ```
 
 {{EmbedLiveSample("Examples", 230, 250)}}
@@ -170,11 +178,11 @@ People implementing checkboxes should do the following:
 
 ## Best practices
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox) using form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) using form control instead of recreating a checkbox's functionality with JavaScript and ARIA.
 
 ## See also
 
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)
 - [ARIA: `radio` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
 - [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
 - [ARIA: `menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)

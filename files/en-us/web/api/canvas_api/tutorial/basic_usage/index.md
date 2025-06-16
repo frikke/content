@@ -14,12 +14,12 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-At first sight a {{HTMLElement("canvas")}} looks like the {{HTMLElement("img")}} element, with the only clear difference being that it doesn't have the `src` and `alt` attributes. Indeed, the `<canvas>` element has only two attributes, [`width`](/en-US/docs/Web/HTML/Element/canvas#width) and [`height`](/en-US/docs/Web/HTML/Element/canvas#height). These are both optional and can also be set using {{Glossary("DOM")}} [properties](/en-US/docs/Web/API/HTMLCanvasElement). When no `width` and `height` attributes are specified, the canvas will initially be **300 pixels** wide and **150 pixels** high. The element can be sized arbitrarily by {{Glossary("CSS")}}, but during rendering the image is scaled to fit its layout size: if the CSS sizing doesn't respect the ratio of the initial canvas, it will appear distorted.
+At first sight a {{HTMLElement("canvas")}} looks like the {{HTMLElement("img")}} element, with the only clear difference being that it doesn't have the `src` and `alt` attributes. Indeed, the `<canvas>` element has only two attributes, [`width`](/en-US/docs/Web/HTML/Reference/Elements/canvas#width) and [`height`](/en-US/docs/Web/HTML/Reference/Elements/canvas#height). These are both optional and can also be set using {{Glossary("DOM")}} [properties](/en-US/docs/Web/API/HTMLCanvasElement). When no `width` and `height` attributes are specified, the canvas will initially be **300 pixels** wide and **150 pixels** high. The element can be sized arbitrarily by {{Glossary("CSS")}}, but during rendering the image is scaled to fit its layout size: if the CSS sizing doesn't respect the ratio of the initial canvas, it will appear distorted.
 
 > [!NOTE]
 > If your renderings seem distorted, try specifying your `width` and `height` attributes explicitly in the `<canvas>` attributes, and not using CSS.
 
-The [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute isn't specific to the `<canvas>` element but is one of the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) which can be applied to any HTML element (like [`class`](/en-US/docs/Web/HTML/Global_attributes/class) for instance). It is always a good idea to supply an `id` because this makes it much easier to identify it in a script.
+The [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute isn't specific to the `<canvas>` element but is one of the [global HTML attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) which can be applied to any HTML element (like [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) for instance). It is always a good idea to supply an `id` because this makes it much easier to identify it in a script.
 
 The `<canvas>` element can be styled just like any normal image ({{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("background")}}…). These rules, however, don't affect the actual drawing on the canvas. We'll see how this is done in a [dedicated chapter](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) of this tutorial. When no styling rules are applied to the canvas it will initially be fully transparent.
 
@@ -113,40 +113,36 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 
 The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{domxref("Window/load_event", "load")}} event on the document. This function, or one like it, could also be called using {{domxref("Window.setTimeout", "setTimeout()")}}, {{domxref("Window.setInterval", "setInterval()")}}, or any other event handler, as long as the page has been loaded first.
 
-Here is how a template would look in action. As shown here, it is initially blank.
-
-{{EmbedLiveSample("A_skeleton_template", "", "160")}}
+At this point, this document should be rendered blank.
 
 ## A simple example
 
-To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
+To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples. Update your `script` element content to this:
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Canvas experiment</title>
-  </head>
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <script type="application/javascript">
-      function draw() {
-        const canvas = document.getElementById("canvas");
-        if (canvas.getContext) {
-          const ctx = canvas.getContext("2d");
+```html hidden
+<canvas id="tutorial" width="150" height="150"></canvas>
+```
 
-          ctx.fillStyle = "rgb(200 0 0)";
-          ctx.fillRect(10, 10, 50, 50);
+```css hidden
+canvas {
+  border: 1px solid black;
+}
+```
 
-          ctx.fillStyle = "rgb(0 0 200 / 50%)";
-          ctx.fillRect(30, 30, 50, 50);
-        }
-      }
-      draw();
-    </script>
-  </body>
-</html>
+```js
+function draw() {
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "rgb(200 0 0)";
+    ctx.fillRect(10, 10, 50, 50);
+
+    ctx.fillStyle = "rgb(0 0 200 / 50%)";
+    ctx.fillRect(30, 30, 50, 50);
+  }
+}
+draw();
 ```
 
 This example looks like this:
