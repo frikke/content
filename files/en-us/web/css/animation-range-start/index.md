@@ -2,12 +2,10 @@
 title: animation-range-start
 slug: Web/CSS/animation-range-start
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.animation-range-start
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`animation-range-start`** [CSS](/en-US/docs/Web/CSS) property is used to set the start of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start.
 
@@ -147,7 +145,7 @@ Last, an animation is specified on the element that animates its opacity and sca
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }

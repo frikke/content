@@ -146,9 +146,15 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
 ```css
-@container (min-width: 400px) { ... }
-@container (orientation: landscape) and (width > 400px) { ... }
-@container (15em <= block-size <= 30em) { ... }
+@container (min-width: 400px) {
+  /* … */
+}
+@container (orientation: landscape) and (width > 400px) {
+  /* … */
+}
+@container (15em <= block-size <= 30em) {
+  /* … */
+}
 ```
 
 - `aspect-ratio`
@@ -179,9 +185,15 @@ The `<container-condition>` can include one or more boolean size queries, each w
 Scroll-state container descriptors are specified inside the `<container-condition>` within a set of parentheses following the `scroll-state` keyword, for example:
 
 ```css
-@container scroll-state(scrollable: top) { ... }
-@container scroll-state(stuck: inline-end) { ... }
-@container scroll-state(snapped: both) { ... }
+@container scroll-state(scrollable: top) {
+  /* … */
+}
+@container scroll-state(stuck: inline-end) {
+  /* … */
+}
+@container scroll-state(snapped: both) {
+  /* … */
+}
 ```
 
 Supported keywords for scroll-state container descriptors include physical and {{glossary("flow relative values")}}
@@ -222,7 +234,9 @@ Supported keywords for scroll-state container descriptors include physical and {
     To evaluate whether a container is scrollable, without being concerned about the direction, use the `none` value with the `not` operator:
 
     ```css
-    @container not scroll-state(scrollable: none) { ... }
+    @container not scroll-state(scrollable: none) {
+      /* … */
+    }
     ```
 
 - `snapped`
@@ -249,7 +263,9 @@ Supported keywords for scroll-state container descriptors include physical and {
     To evaluate whether a container is a snap target, without being concerned about the direction, use the `none` value with the `not` operator:
 
     ```css
-    @container not scroll-state(snapped: none) { ... }
+    @container not scroll-state(snapped: none) {
+      /* … */
+    }
     ```
 
 - `stuck`
@@ -280,19 +296,25 @@ Supported keywords for scroll-state container descriptors include physical and {
     It is possible for two values from opposite axes to match at the same time:
 
     ```css
-    @container scroll-state((stuck: top) and (stuck: left)) { ... }
+    @container scroll-state((stuck: top) and (stuck: left)) {
+      /* … */
+    }
     ```
 
     However, two values from opposite edges will never match at the same time:
 
     ```css
-    @container scroll-state((stuck: left) and (stuck: right)) { ... }
+    @container scroll-state((stuck: left) and (stuck: right)) {
+      /* … */
+    }
     ```
 
     To evaluate whether a container is stuck, without being concerned about the direction, use the `none` value with the `not` operator:
 
     ```css
-    @container not scroll-state(stuck: none) { ... }
+    @container not scroll-state(stuck: none) {
+      /* … */
+    }
     ```
 
 ## Formal syntax
@@ -320,11 +342,11 @@ You can then use the `@container` at-rule to apply styles to the element with th
 ```js hidden
 const post = document.querySelector(".post");
 const span = document.createElement("span");
-span.textContent = ".post width: " + post.clientWidth + "px";
+span.textContent = `.post width: ${post.clientWidth}px`;
 post.parentNode.insertBefore(span, post.nextSibling);
 // update on resize
 window.addEventListener("resize", () => {
-  span.textContent = ".post width: " + post.clientWidth + "px";
+  span.textContent = `.post width: ${post.clientWidth}px`;
 });
 ```
 

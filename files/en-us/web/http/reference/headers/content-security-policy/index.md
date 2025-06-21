@@ -1,5 +1,5 @@
 ---
-title: Content-Security-Policy (CSP)
+title: Content-Security-Policy (CSP) header
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 page-type: http-header
@@ -126,7 +126,7 @@ applies.
     element.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the
-    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute.
+    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute.
 
 ### Navigation directives
 
@@ -193,7 +193,9 @@ The `<host-source>` and `<scheme-source>` formats must be unquoted, and all othe
 
 ### 'nonce-\<nonce_value>'
 
-This value consists of the string `nonce-` followed by a {{glossary("Base64", "base64-encoded")}} string. This string is a random value that the server generates for every HTTP response. For example:
+This value consists of the string `nonce-` followed by a nonce value. The nonce value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
+
+This string is a random value that the server generates for every HTTP response. For example:
 
 ```plain
 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
@@ -212,7 +214,7 @@ See [Nonces](/en-US/docs/Web/HTTP/Guides/CSP#nonces) in the CSP guide for more u
 
 ### '\<hash_algorithm>-<hash_value>'
 
-This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
+This value consists of a string identifying a hash algorithm, followed by `-`, followed by a hash value. The hash value may use any of the characters from [Base64](/en-US/docs/Glossary/Base64#base64_characters) or [URL-safe Base64](/en-US/docs/Glossary/Base64#url_and_filename_safe_base64).
 
 - The hash algorithm identifier must be one of `sha256`, `sha384`, or `sha512`.
 - The hash value is the base64-encoded {{glossary("hash function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
@@ -225,7 +227,7 @@ For example:
 
 When the browser receives the document, it hashes the contents of any `<script>` and `<style>` elements, compares the result with any hashes in the CSP directive, and loads the resource only if there is a match.
 
-If the element loads an external resource (for example, using the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute), then the element must also have the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute set.
+If the element loads an external resource (for example, using the [`src`](/en-US/docs/Web/HTML/Reference/Elements/script#src) attribute), then the element must also have the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute set.
 
 If a directive contains a hash and `unsafe-inline`, then the browser ignores `unsafe-inline`.
 
@@ -341,7 +343,7 @@ If the hash value matches the hash of an inline event handler attribute value or
 
 ### 'inline-speculation-rules'
 
-By default, if a CSP contains a `default-src` or a `script-src` directive, then inline JavaScript is not allowed to execute. The `'inline-speculation-rules'` allows the browser to load inline `<script>` elements that have a [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of [`speculationrules`](/en-US/docs/Web/HTML/Element/script/type/speculationrules).
+By default, if a CSP contains a `default-src` or a `script-src` directive, then inline JavaScript is not allowed to execute. The `'inline-speculation-rules'` allows the browser to load inline `<script>` elements that have a [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of [`speculationrules`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules).
 
 See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
 

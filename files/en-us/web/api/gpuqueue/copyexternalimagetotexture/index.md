@@ -3,12 +3,10 @@ title: "GPUQueue: copyExternalImageToTexture() method"
 short-title: copyExternalImageToTexture()
 slug: Web/API/GPUQueue/copyExternalImageToTexture
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.GPUQueue.copyExternalImageToTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`copyExternalImageToTexture()`** method of the
 {{domxref("GPUQueue")}} interface copies a snapshot taken from a source image, video, or canvas into a given {{domxref("GPUTexture")}}.
@@ -33,20 +31,7 @@ copyExternalImageToTexture(source, destination, copySize)
 
       - : An object or array specifying the origin of the copy — the top-left corner of the source sub-region to copy from. Together with `copySize`, this defines the full extent of the source sub-region. The `x` and `y` values default to 0 if any of all of `origin` is omitted.
 
-        What follows is a sample array:
-
-        ```js
-        origin: [0, 0];
-        ```
-
-        The object equivalent would look like this:
-
-        ```js
-        origin: {
-          x: 0,
-          y: 0
-        }
-        ```
+        For example, you can pass an array like `[0, 0]`, or its equivalent object `{ x: 0, y: 0 }`.
 
     - `flipY` {{optional_inline}}
       - : A boolean. If set to `true`, the image capture is flipped vertically. If omitted, `flipY` defaults to `false`.
