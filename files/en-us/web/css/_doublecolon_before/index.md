@@ -62,6 +62,8 @@ If the [`content`](/en-US/docs/Web/CSS/content) property is not specified, has a
 > [!NOTE]
 > The [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) specification introduced the double-colon notation `::before` to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). Browsers also accept single-colon notation `:before`, introduced in CSS2.
 
+By default, the `::before` and `::after` pseudo-elements share the same stacking context as their parent. If no {{cssxref("z-index")}} is explicitly set, the `::after` pseudo-element's generated content will appear above the `::before` pseudo-element's generated content because `::after` is rendered later in the DOM flow.
+
 ## Accessibility
 
 Using a `::before` pseudo-element to add content is discouraged, as it is not reliably accessible to screen readers.
@@ -238,7 +240,7 @@ li[aria-current="step"]::before {
 
 The `::before::marker` [nested pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#nesting_pseudo-elements) selects the list {{CSSxRef("::marker")}} of an `::after` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item`.
 
-In this demo, we generate extra [list items](/en-US/docs/Web/HTML/Element/li) before and after a list navigation menu using `::before` and `::after` (setting them to `display: list-item` so they behave like list items). We then use `ul::before::marker` and `ul::after::marker` to give their list markers a different color.
+In this demo, we generate extra [list items](/en-US/docs/Web/HTML/Reference/Elements/li) before and after a list navigation menu using `::before` and `::after` (setting them to `display: list-item` so they behave like list items). We then use `ul::before::marker` and `ul::after::marker` to give their list markers a different color.
 
 #### HTML
 

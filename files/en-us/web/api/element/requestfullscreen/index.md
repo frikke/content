@@ -58,10 +58,8 @@ procedure announces error conditions by rejecting the `Promise` it has
 returned. The rejection handler receives one of the following exception values:_
 
 - {{jsxref("TypeError")}}
-
   - : The `TypeError` exception may be delivered in any of the following
     situations:
-
     - The document containing the element isn't fully active; that is, it's not the
       current active document.
     - The element is not contained by a document.
@@ -85,7 +83,7 @@ simple requirements:
   {{MathMLElement("math")}}.
 - It is _not_ a {{HTMLElement("dialog")}} element.
 - It must either be located within the top-level document or in an
-  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   attribute applied to it.
 
 Additionally, any set Permissions Policies must allow the use of this feature.
@@ -191,4 +189,4 @@ The {{domxref("Window.getScreenDetails()")}} method is used to retrieve the {{do
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

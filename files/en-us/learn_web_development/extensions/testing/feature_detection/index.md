@@ -3,9 +3,10 @@ title: Implementing feature detection
 short-title: Feature detection
 slug: Learn_web_development/Extensions/Testing/Feature_detection
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 Feature detection involves working out whether a browser supports a certain block of code, and running different code depending on whether it does (or doesn't), so that the browser can always provide a working experience rather than crashing/erroring in some browsers. This article details how to write your own simple feature detection, how to use a library to speed up implementation, and native features for feature detection such as `@supports`.
 
@@ -42,7 +43,7 @@ Let's recap and look at the example we touched on in our [JavaScript debugging a
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition((position) => {
     // show the location on a map, such as the Google Maps API
   });
 } else {
@@ -132,7 +133,6 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
 Common patterns for detectable features include:
 
 - Members of an object
-
   - : Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent `Object`.
 
     Our earlier example used this pattern to detect [Geolocation](/en-US/docs/Web/API/Geolocation_API) support by testing the [`navigator`](/en-US/docs/Web/API/Navigator) object for a `geolocation` member:
@@ -144,7 +144,6 @@ Common patterns for detectable features include:
     ```
 
 - Properties of an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a property exists on it.
 
     This example shows a way of detecting [Canvas API](/en-US/docs/Web/API/Canvas_API) support:
@@ -163,11 +162,9 @@ Common patterns for detectable features include:
     > The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
 - Specific return values of a method on an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns.
 
 - Retention of assigned property value by an element
-
   - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained.
 
 Bear in mind that some features are, however, known to be undetectable. In these cases, you'll need to use a different approach, such as using a {{Glossary("Polyfill", "polyfill")}}.

@@ -3,9 +3,8 @@ title: "Test your skills: Object basics"
 short-title: Objects
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Object_basics
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
 
@@ -42,7 +41,6 @@ In our next task, we want you to have a go at creating your own object literal t
 - `formed`: A number representing the year the band formed.
 - `split`: A number representing the year the band split up, or `false` if they are still together.
 - `albums`: An array representing the albums released by the band. Each array item should be an object containing the following members:
-
   - `name`: A string representing the name of the album.
   - `released`: A number representing the year the album was released.
 

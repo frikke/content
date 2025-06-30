@@ -55,12 +55,11 @@ This article provides information about the changes in Firefox 68 that will affe
 
 #### Removals
 
-- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Element/meta) is no longer supported ([Firefox bug 1457503](https://bugzil.la/1457503)).
+- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Reference/Elements/meta) is no longer supported ([Firefox bug 1457503](https://bugzil.la/1457503)).
 
 ### CSS
 
 - [CSS Scroll Snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) has been updated to the latest version of the specification ([Firefox bug 1312163](https://bugzil.la/1312163)) and ([Firefox bug 1544136](https://bugzil.la/1544136)), this includes:
-
   - The `scroll-padding` property ([Firefox bug 1373832](https://bugzil.la/1373832))
   - The `scroll-margin` property ([Firefox bug 1373833](https://bugzil.la/1373833))
   - The {{CSSxRef("scroll-snap-align")}} property ([Firefox bug 1373835](https://bugzil.la/1373835))

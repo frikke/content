@@ -46,7 +46,6 @@ src:
 ### Values
 
 - `url()`
-
   - : Specifies an external reference consisting of a {{cssxref("url_value", "&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
 
 - `format()`
@@ -59,7 +58,6 @@ src:
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
     The value for `tech()` may be one of the keywords described in [Font technologies](#font_technologies).
 - `local(<font-face-name>)`
-
   - : Specifies the font name should the font be available on the user's device.
     Enclosing the font name in quotes is optional.
 
@@ -160,18 +158,9 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 ## Formal syntax
 
-```plain
-<url> [ format( <font-format> ) ]? [ tech( <font-tech># ) ]?  |
-local( <family-name> )
+{{CSSSyntax}}
 
-<font-format> = [ <string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]
-
-<font-tech> = [ <font-features-tech> | <color-font-tech> | variations | palettes | incremental-patch | incremental-range | incremental-auto ]
-
-<font-features-tech> = [ features-opentype | features-aat | features-graphite ]
-
-<color-font-tech> = [ color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]
-```
+{{CSSSyntaxRaw(`<font-src>`)}}
 
 ## Examples
 
