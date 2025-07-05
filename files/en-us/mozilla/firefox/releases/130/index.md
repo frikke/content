@@ -2,9 +2,8 @@
 title: Firefox 130 for developers
 slug: Mozilla/Firefox/Releases/130
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 130 that affect developers. Firefox 130 was released on [September 3, 2024](https://whattrainisitnow.com/release/?version=130).
 
@@ -12,8 +11,8 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ### HTML
 
-- The [`name`](/en-US/docs/Web/HTML/Element/details#name) attribute of the `<details>` element now allows the grouping of `<details>` elements, where only one element within a group can be open at a time. This allows you to create an exclusive accordion without using JavaScript ([Firefox bug 1856460](https://bugzil.la/1856460) and [Firefox bug 1909613](https://bugzil.la/1909613)).
-- The [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) [global attributes](/en-US/docs/Web/HTML/Global_attributes) now have improved inheritance, including how they work with [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#attribute_inheritance) ([Firefox bug 1876163](https://bugzil.la/1876163)).
+- The [`name`](/en-US/docs/Web/HTML/Reference/Elements/details#name) attribute of the `<details>` element now allows the grouping of `<details>` elements, where only one element within a group can be open at a time. This allows you to create an exclusive accordion without using JavaScript ([Firefox bug 1856460](https://bugzil.la/1856460) and [Firefox bug 1909613](https://bugzil.la/1909613)).
+- The [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) now have improved inheritance, including how they work with [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#attribute_inheritance) ([Firefox bug 1876163](https://bugzil.la/1876163)).
 
 ### CSS
 
@@ -27,7 +26,7 @@ This article provides information about the changes in Firefox 130 that affect d
 
 #### Removals
 
-- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) were prematurely released (without an an implementation) in [Firefox 127](/en-US/docs/Mozilla/Firefox/Releases/127), and have been removed ([Firefox bug 1909559](https://bugzil.la/1909559)).
+- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) were prematurely released (without an implementation) in [Firefox 127](/en-US/docs/Mozilla/Firefox/Releases/127), and have been removed ([Firefox bug 1909559](https://bugzil.la/1909559)).
 
 ### WebAssembly
 

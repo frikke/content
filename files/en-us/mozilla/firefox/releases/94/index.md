@@ -2,9 +2,8 @@
 title: Firefox 94 for developers
 slug: Mozilla/Firefox/Releases/94
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 94 that will affect developers. Firefox 94 was released on November 2nd, 2021
 
@@ -28,7 +27,7 @@ No notable changes
 
 #### DOM
 
-- Developers can now provide a hint for the enter key label/icon used on virtual keyboards, using either [`HTMLElement.enterkeyhint`](/en-US/docs/Web/API/HTMLElement/enterKeyHint) or the global attribute [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) ([Firefox bug 1648332](https://bugzil.la/1648332)).
+- Developers can now provide a hint for the enter key label/icon used on virtual keyboards, using either [`HTMLElement.enterkeyhint`](/en-US/docs/Web/API/HTMLElement/enterKeyHint) or the global attribute [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) ([Firefox bug 1648332](https://bugzil.la/1648332)).
 - The {{domxref("HTMLScriptElement.supports_static", "HTMLScriptElement.supports()")}} static method is now supported. This provides a simple and unified method for feature checking whether a browser supports particular types of scripts, such as JavaScript modules or classic scripts ([Firefox bug 1729239](https://bugzil.la/1729239)).
 - The {{domxref("ShadowRoot.delegatesFocus")}} property is now supported, allowing code to check whether the `delegatesFocus` property was set when the [shadow DOM was attached](/en-US/docs/Web/API/Element/attachShadow) ([Firefox bug 1413836](https://bugzil.la/1413836)).
 

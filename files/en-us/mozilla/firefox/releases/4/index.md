@@ -2,9 +2,8 @@
 title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 4, which shipped on March 22, 2011, enhances performance, adds more support for HTML5 and other evolving Web technologies, and further improves security. This article provides information about this release and what features are available for Web developers, add-on developers, and Gecko platform developers alike.
 
@@ -16,9 +15,9 @@ Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs,
 
 - [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : A look at improvements to web forms. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
-- [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [HTML5 Sections](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
-- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes/hidden)
+- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden)
   - : This attribute, common to all elements, is used to hide content in a webpage that is not currently relevant to the user.
 - Other HTML5 elements
   - : Gecko now also supports the following new HTML5 elements: {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, and {{HTMLElement("figcaption")}}.

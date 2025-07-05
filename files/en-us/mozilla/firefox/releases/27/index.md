@@ -2,9 +2,8 @@
 title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 27 was released on February 4, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
@@ -36,8 +35,8 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 
 ### HTML
 
-- The `color` value of the {{HTMLElement("input")}} [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute has been implemented on desktop platforms. It was already available on mobile ones.
-- The `allow-popups` directive is now supported with the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute of the {{HTMLElement("iframe")}} element ([Firefox bug 766282](https://bugzil.la/766282)).
+- The `color` value of the {{HTMLElement("input")}} [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute has been implemented on desktop platforms. It was already available on mobile ones.
+- The `allow-popups` directive is now supported with the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute of the {{HTMLElement("iframe")}} element ([Firefox bug 766282](https://bugzil.la/766282)).
 - Blending of HTML elements using the {{cssxref("mix-blend-mode")}} property has been implemented. The `layout.css.mix-blend-mode.enabled` preference must be set to `true` ([Firefox bug 902525](https://bugzil.la/902525)).
 - The `typeMustMatch` property of the {{HTMLElement("object")}} element is now supported ([Firefox bug 827160](https://bugzil.la/827160)).
 

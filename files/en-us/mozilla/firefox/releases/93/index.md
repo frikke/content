@@ -2,9 +2,8 @@
 title: Firefox 93 for developers
 slug: Mozilla/Firefox/Releases/93
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 93 that will affect developers. Firefox 93 was released on October 5, 2021.
 
@@ -16,7 +15,7 @@ This article provides information about the changes in Firefox 93 that will affe
 ### HTML
 
 - The ARIA [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) role has been implemented ([Firefox bug 1727616](https://bugzil.la/1727616)).
-- The UI for [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local) has been implemented. ([Firefox bug 1283388](https://bugzil.la/1283388)).
+- The UI for [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) has been implemented. ([Firefox bug 1283388](https://bugzil.la/1283388)).
 
 ### CSS
 

@@ -2,9 +2,8 @@
 title: Firefox 134 for developers
 slug: Mozilla/Firefox/Releases/134
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 was released on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
 
@@ -59,7 +58,7 @@ These features are newly shipped in Firefox 134 but are disabled by default. To 
 
 - **`Intl.DurationFormat`** (Nightly release): {{jsxref("Intl.DurationFormat")}} enables locale-sensitive formatting of durations. ([Firefox bug 1648139](https://bugzil.la/1648139)).
 - **`autocorrect`**: <code>dom.forms.autocorrect</code>.
-  The HTML [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attribute and {{domxref("HTMLElement.autocorrect")}} property allow autocorrection in editable text elements, including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set ([Firefox bug 1725806](https://bugzil.la/1725806)).
+  The HTML [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) attribute and {{domxref("HTMLElement.autocorrect")}} property allow autocorrection in editable text elements, including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set ([Firefox bug 1725806](https://bugzil.la/1725806)).
 
 ## Older versions
 

@@ -2,9 +2,8 @@
 title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
@@ -16,7 +15,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 ### HTML
 
 - The new HTML5 {{ HTMLElement("bdi") }} element, bi-directional isolation, allowing isolation of parts of text with a different directionality has been implemented. This is especially useful when displaying text with an unknown directionality, coming from a database for example, in the middle of text with a known, and potentially, different one.
-- You may now specify a fragment of "top" for the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
+- You may now specify a fragment of "top" for the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
 
 ### JavaScript
 

@@ -460,8 +460,8 @@ This topic provides an index to the main _sorts_ of events you might be interest
         <a href="/en-US/docs/Web/API/TextTrackList#events"
           ><code>TextTrackList</code></a
         >,
-        <a href="/en-US/docs/Web/HTML/Element/audio#events">Element/audio</a>,
-        <a href="/en-US/docs/Web/HTML/Element/video#events">Element/video</a>.
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/audio#events">Element/audio</a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/video#events">Element/video</a>.
       </td>
     </tr>
     <tr>
@@ -827,5 +827,8 @@ This topic provides an index to the main _sorts_ of events you might be interest
 <section id="Quick_links">
   <ol>
     <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
-  </ol>{{ListSubpages}}
+    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+    <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
+    <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
+  </ol>
 </section>

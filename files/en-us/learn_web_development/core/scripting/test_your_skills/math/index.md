@@ -3,14 +3,13 @@ title: "Test your skills: Math"
 short-title: Math
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Math
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of the tests on this page is to assess whether you've understood the [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn_web_development/Core/Scripting/Math) article.
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 > If there is an error in your code, it will be logged into the results panel on this page or in the JavaScript console.
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
