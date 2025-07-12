@@ -3,14 +3,13 @@ title: "Test your skills: Loops"
 short-title: Loops
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Loops
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Looping code](/en-US/docs/Learn_web_development/Core/Scripting/Loops) article.
 
 > [!NOTE]
-> You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -22,7 +21,7 @@ We haven't explicitly taught this yet in the course, but you'll have seen some e
 
 ## Loops 1
 
-In our first looping task we want you to start by creating a simple loop that goes through all the items in the provided `myArray` and prints them out on the screen inside list items (i.e., [`<li>`](/en-US/docs/Web/HTML/Element/li) elements), which are appended to the provided `list`.
+In our first looping task we want you to start by creating a simple loop that goes through all the items in the provided `myArray` and prints them out on the screen inside list items (i.e., [`<li>`](/en-US/docs/Web/HTML/Reference/Elements/li) elements), which are appended to the provided `list`.
 
 > [!CALLOUT]
 >

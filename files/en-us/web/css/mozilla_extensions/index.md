@@ -19,12 +19,11 @@ Firefox supports several extensions to [CSS](/en-US/docs/Web/CSS), which are pre
 
 - {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-force-broken-image-icon")}} {{deprecated_inline}}: Use `alt` text instead.
-- {{CSSxRef("-moz-image-region")}}
 - {{CSSxRef("-moz-orient")}}
 - `-moz-osx-font-smoothing`: A similar {{CSSxRef("font-smooth")}} equivalent exists.
 - {{CSSxRef("-moz-user-focus")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-user-input")}} {{deprecated_inline}}
-- `-moz-user-modify`: A non-prefixed {{CSSxRef("user-modify")}} equivalent exists, but the HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute is recommended instead.
+- `-moz-user-modify`: A non-prefixed {{CSSxRef("user-modify")}} equivalent exists, but the HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute is recommended instead.
 
 ## -moz-prefixed properties with standard equivalents
 
